@@ -1,0 +1,78 @@
+@font-face {
+  font-family: lazer;
+  src: url("../../fonts/Brat.ttf");
+}
+
+a {
+  font-family: $ff-secondary;
+  text-decoration: none;
+  color: #fff;
+}
+
+.navbar-desktop {
+  .container {
+    justify-content: end;
+    .navbar-menu {
+      display: flex;
+      justify-content: flex-end;
+      gap: 42px;
+      padding-top: 24px;
+
+      .nav-items {
+        a.about-hover,
+        a.work-hover,
+        a.contact-hover {
+          font-family: lazer;
+          font-size: 3.25rem;
+          background: #830044;
+          background: -webkit-linear-gradient(to top, #830044 10%, #ff0078 44%);
+          background: -moz-linear-gradient(to top, #830044 10%, #ff0078 44%);
+          background: linear-gradient(to top, #830044 10%, #ff0078 44%);
+          -webkit-background-clip: text;
+          -webkit-text-fill-color: transparent;
+        }
+
+        &:hover,
+        &:focus {
+          a {
+          }
+        }
+      }
+
+      .social-container {
+        display: flex;
+        align-items: center;
+        margin: 0 36px;
+
+        a {
+          margin: 0 8px;
+        }
+        i {
+          font-size: 2rem;
+          background: #830044;
+          background: -webkit-linear-gradient(to top, #830044 10%, #ff0078 44%);
+          background: -moz-linear-gradient(to top, #830044 10%, #ff0078 44%);
+          background: linear-gradient(to top, #830044 10%, #ff0078 44%);
+          -webkit-background-clip: text;
+          -webkit-text-fill-color: transparent;
+        }
+      }
+    }
+  }
+}
+
+@media (min-width: map-get($viewport_size, m)) {
+}
+
+@media (min-width: map-get($viewport_size, l)) {
+  .navbar-desktop {
+    .container {
+      .navbar-menu {
+      }
+      .social-container {
+        margin: 0 36px;
+        gap: 16px;
+      }
+    }
+  }
+}
