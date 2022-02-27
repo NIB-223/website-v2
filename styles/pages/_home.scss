@@ -4,6 +4,9 @@
 }
 @import url("https://fonts.googleapis.com/css2?family=Yellowtail&display=swap");
 
+@import "../components/navbar";
+@import "../components/mobile_menu";
+
 .video-overlay {
   background-color: rgba(0, 0, 0, 0.25);
   position: fixed;
@@ -80,7 +83,7 @@
         transform: rotate(-8deg);
         font-size: 2rem;
         position: absolute;
-        top: 35%;
+        top: 40%;
         font-family: $ff-web-dev;
       }
       @keyframes flicker {

@@ -16,8 +16,16 @@ body {
 /*Breakpoints*/
 /*Typography*/
 @font-face {
-  font-family: lazer;
+  font-family: kimberly;
+  src: url(../../fonts/kimberley\ bl.ttf);
+}
+@font-face {
+  font-family: Brat;
   src: url("../../fonts/Brat.ttf");
+}
+@font-face {
+  font-family: Lazer;
+  src: url("../../fonts/Lazer84.ttf");
 }
 a {
   font-family: "Jura", sans-serif;
@@ -25,20 +33,36 @@ a {
   color: #fff;
 }
 
-.navbar-desktop .container {
-  justify-content: end;
+.desktop-header {
+  display: none;
 }
-.navbar-desktop .container .navbar-menu {
+.desktop-header .navbar {
   display: flex;
-  justify-content: flex-end;
-  gap: 42px;
+  justify-content: space-between;
+  align-items: center;
+  gap: 36px;
   padding-top: 24px;
 }
-.navbar-desktop .container .navbar-menu .nav-items a.about-hover,
-.navbar-desktop .container .navbar-menu .nav-items a.work-hover,
-.navbar-desktop .container .navbar-menu .nav-items a.contact-hover {
-  font-family: lazer;
-  font-size: 3.25rem;
+.desktop-header .navbar .logo {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-left: 42px;
+}
+.desktop-header .navbar .logo img {
+  width: 64px;
+}
+.desktop-header .navbar-menu {
+  display: flex;
+  align-items: center;
+  gap: 32px;
+  /*social*/
+}
+.desktop-header .navbar-menu .nav-items a.about-hover,
+.desktop-header .navbar-menu .nav-items a.work-hover,
+.desktop-header .navbar-menu .nav-items a.contact-hover {
+  font-family: Brat;
+  font-size: 2.75rem;
   background: #830044;
   background: -webkit-linear-gradient(to top, #830044 10%, #ff0078 44%);
   background: -moz-linear-gradient(to top, #830044 10%, #ff0078 44%);
@@ -46,16 +70,45 @@ a {
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
 }
-.navbar-desktop .container .navbar-menu .social-container {
+.desktop-header .navbar-menu .nav-items .about-hover.underlined,
+.desktop-header .navbar-menu .nav-items .work-hover.underlined,
+.desktop-header .navbar-menu .nav-items .contact-hover.underlined {
+  display: inline-block;
+  color: #830044;
+  position: relative;
+}
+.desktop-header .navbar-menu .nav-items .about-hover.underlined::after,
+.desktop-header .navbar-menu .nav-items .work-hover.underlined::after,
+.desktop-header .navbar-menu .nav-items .contact-hover.underlined::after {
+  content: "";
+  position: absolute;
+  width: 100%;
+  height: 2px;
+  bottom: 0;
+  left: 0;
+  border: solid 2px #830044;
+  border-color: #830044 transparent transparent transparent;
+  border-radius: 90%;
+  transform-origin: bottom right;
+  transform: scaleX(0);
+  transition: transform 100ms ease-out;
+}
+.desktop-header .navbar-menu .nav-items .about-hover.underlined:hover::after,
+.desktop-header .navbar-menu .nav-items .work-hover.underlined:hover::after,
+.desktop-header .navbar-menu .nav-items .contact-hover.underlined:hover::after {
+  transform: scale(1);
+  transform-origin: bottom left;
+}
+.desktop-header .navbar-menu .social-container {
   display: flex;
   align-items: center;
-  margin: 0 36px;
+  margin: 0 24px;
 }
-.navbar-desktop .container .navbar-menu .social-container a {
+.desktop-header .navbar-menu .social-container a {
   margin: 0 8px;
 }
-.navbar-desktop .container .navbar-menu .social-container i {
-  font-size: 2rem;
+.desktop-header .navbar-menu .social-container i {
+  font-size: 1.5rem;
   background: #830044;
   background: -webkit-linear-gradient(to top, #830044 10%, #ff0078 44%);
   background: -moz-linear-gradient(to top, #830044 10%, #ff0078 44%);
@@ -64,15 +117,10 @@ a {
   -webkit-text-fill-color: transparent;
 }
 
-@media (min-width: 1024px) {
-  .navbar-desktop .container .social-container {
-    margin: 0 36px;
-    gap: 16px;
+@media (min-width: 768px) {
+  .desktop-header {
+    display: unset;
   }
-}
-@font-face {
-  font-family: kimberly;
-  src: url(../../fonts/kimberley\ bl.ttf);
 }
 .video-overlay {
   background-color: rgba(0, 0, 0, 0.25);
@@ -138,7 +186,7 @@ a {
   transform: rotate(-8deg);
   font-size: 2rem;
   position: absolute;
-  top: 35%;
+  top: 40%;
   font-family: "Yellowtail", cursive;
 }
 @keyframes flicker {

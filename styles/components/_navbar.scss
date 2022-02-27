@@ -1,6 +1,10 @@
 @font-face {
-  font-family: lazer;
+  font-family: Brat;
   src: url("../../fonts/Brat.ttf");
+}
+@font-face {
+  font-family: Lazer;
+  src: url("../../fonts/Lazer84.ttf");
 }
 
 a {
@@ -9,70 +13,95 @@ a {
   color: #fff;
 }
 
-.navbar-desktop {
-  .container {
-    justify-content: end;
-    .navbar-menu {
+.desktop-header {
+  display: none;
+  .navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 36px;
+    padding-top: 24px;
+
+    .logo {
       display: flex;
-      justify-content: flex-end;
-      gap: 42px;
-      padding-top: 24px;
+      justify-content: center;
+      align-items: center;
+      margin-left: 42px;
 
-      .nav-items {
-        a.about-hover,
-        a.work-hover,
-        a.contact-hover {
-          font-family: lazer;
-          font-size: 3.25rem;
-          background: #830044;
-          background: -webkit-linear-gradient(to top, #830044 10%, #ff0078 44%);
-          background: -moz-linear-gradient(to top, #830044 10%, #ff0078 44%);
-          background: linear-gradient(to top, #830044 10%, #ff0078 44%);
-          -webkit-background-clip: text;
-          -webkit-text-fill-color: transparent;
-        }
+      img {
+        width: 64px;
+      }
+    }
+  }
 
-        &:hover,
-        &:focus {
-          a {
+  .navbar-menu {
+    display: flex;
+    align-items: center;
+    gap: 32px;
+    .nav-items {
+      a.about-hover,
+      a.work-hover,
+      a.contact-hover {
+        font-family: Brat;
+        font-size: 2.75rem;
+        background: #830044;
+        background: -webkit-linear-gradient(to top, #830044 10%, #ff0078 44%);
+        background: -moz-linear-gradient(to top, #830044 10%, #ff0078 44%);
+        background: linear-gradient(to top, #830044 10%, #ff0078 44%);
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+      }
+      .about-hover,
+      .work-hover,
+      .contact-hover {
+        &.underlined {
+          display: inline-block;
+          color: #830044;
+          position: relative;
+          &::after {
+            content: "";
+            position: absolute;
+            width: 100%;
+            height: 2px;
+            bottom: 0;
+            left: 0;
+            border: solid 2px #830044;
+            border-color: #830044 transparent transparent transparent;
+            border-radius: 90%;
+            transform-origin: bottom right;
+            transform: scaleX(0);
+            transition: transform 100ms ease-out;
+          }
+          &:hover::after {
+            transform: scale(1);
+            transform-origin: bottom left;
           }
         }
       }
-
-      .social-container {
-        display: flex;
-        align-items: center;
-        margin: 0 36px;
-
-        a {
-          margin: 0 8px;
-        }
-        i {
-          font-size: 2rem;
-          background: #830044;
-          background: -webkit-linear-gradient(to top, #830044 10%, #ff0078 44%);
-          background: -moz-linear-gradient(to top, #830044 10%, #ff0078 44%);
-          background: linear-gradient(to top, #830044 10%, #ff0078 44%);
-          -webkit-background-clip: text;
-          -webkit-text-fill-color: transparent;
-        }
+    }
+    /*social*/
+    .social-container {
+      display: flex;
+      align-items: center;
+      margin: 0 24px;
+      a {
+        margin: 0 8px;
+      }
+      i {
+        font-size: 1.5rem;
+        background: #830044;
+        background: -webkit-linear-gradient(to top, #830044 10%, #ff0078 44%);
+        background: -moz-linear-gradient(to top, #830044 10%, #ff0078 44%);
+        background: linear-gradient(to top, #830044 10%, #ff0078 44%);
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
       }
     }
   }
 }
 
 @media (min-width: map-get($viewport_size, m)) {
-}
-
-@media (min-width: map-get($viewport_size, l)) {
-  .navbar-desktop {
-    .container {
-      .navbar-menu {
-      }
-      .social-container {
-        margin: 0 36px;
-        gap: 16px;
-      }
-    }
+  .desktop-header {
+    display: unset;
   }
 }

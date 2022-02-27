@@ -8,7 +8,7 @@
     <meta name="keywords"
         content="personal website, portfolio, skills, services, web development, software engineer, software developer, design">
     <title>Robert Uebelhor</title>
-    <link rel="shortcut icon" href="img/favicon.png" type="image/x-icon" />
+    <link rel="shortcut icon" href="./img/logo.png" type="image/x-icon" />
     <link href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.min.css" rel="normalizer">
     <link rel="stylesheet" type="text/css" href="styles/css/main.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -38,27 +38,42 @@
 
         </div> -->
 
-        <!--Navbar/Sidenav-->
+        <!--DESKTOP/MOBILE HEADERS-->
         <header id="header">
 
-            <!--mobile nav-->
-            <nav>
+            <!--mobile header-->
+            <!-- <nav class="navbar-mobile">
+                <div class="openMenu"></div>
+                <div class="openMenu"><i class="fa fa-bars"></i></div>
+                <ul class="mainMenu">
+                    <li><a href="">About</a></li>
+                    <li><a href="">Work</a></li>
+                    <li><a href="">Contact</a></li>
 
-            </nav>
+                </ul>
+            </nav> -->
 
-            <!--desktop nav-->
-            <nav class="navbar-desktop">
-                <div class="container">
+            <!--desktop header-->
+            <nav class="desktop-header">
+                <div class="navbar">
+
+                    <!--logo-->
+                    <div class="logo">
+                        <a class="underlined-logo logo-hover" href="index.html" title="Home">
+                            <img src="./img/logo.png">
+                        </a>
+                    </div>
+
+                    <!--navbar menu-->
                     <div class="navbar-menu">
-
                         <div class="nav-items">
-                            <a class="about-hover" href="about.html" title="About">&nbsp;About</a>
+                            <a class="underlined about-hover" href="about.html" title="About">&nbsp;About&nbsp;</a>
                         </div>
                         <div class="nav-items">
-                            <a class="work-hover" href="work.html" title="Work">&nbsp;Work</a>
+                            <a class="underlined work-hover" href="work.html" title="Work">&nbsp;Work&nbsp;</a>
                         </div>
                         <div class="nav-items">
-                            <a class="contact-hover" href="#" title="Contact">&nbsp;Contact</a>
+                            <a class="underlined contact-hover" href="#" title="Contact">&nbsp;Contact&nbsp;</a>
                         </div>
 
                         <!--social-->
@@ -69,6 +84,7 @@
                                     class="fa-brands fa-linkedin-in"></i></a>
                         </div>
                     </div>
+
                 </div>
             </nav>
 
