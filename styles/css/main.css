@@ -10,7 +10,7 @@ body {
 .main-page {
   display: grid;
   grid-template-columns: 1fr;
-  grid-template-rows: [row1-start] 35%;
+  grid-template-rows: [row1-start] 65%;
 }
 
 /*Breakpoints*/
@@ -122,6 +122,115 @@ a {
     display: unset;
   }
 }
+body {
+  font-family: "Jura", sans-serif;
+}
+
+.navbar-mobile {
+  background: transparent;
+  display: flex;
+  justify-content: space-between;
+}
+.navbar-mobile .logo {
+  align-self: center;
+  cursor: pointer;
+  margin-left: 26px;
+  margin-top: 8px;
+}
+.navbar-mobile .logo img {
+  width: 64px;
+}
+.navbar-mobile .openMenu {
+  font-size: 2rem;
+  margin: 20px;
+  display: block;
+  cursor: pointer;
+  background: #830044;
+  background: -webkit-linear-gradient(to top, #830044 10%, #ff0078 44%);
+  background: -moz-linear-gradient(to top, #830044 10%, #ff0078 44%);
+  background: linear-gradient(to top, #830044 10%, #ff0078 44%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+.navbar-mobile .mainMenu {
+  justify-items: center;
+  grid-template-columns: 1fr;
+  place-items: center;
+  margin-top: 0;
+  height: 100vh;
+  position: fixed;
+  top: 0;
+  right: 0;
+  left: 0;
+  z-index: 10;
+  background-color: rgba(0, 0, 0, 0.975);
+  transition: top 1s ease;
+  display: none;
+  list-style: none;
+  padding-inline-start: 0;
+}
+.navbar-mobile .mainMenu .nav-items {
+  align-self: end;
+}
+.navbar-mobile .mainMenu .nav-items li a {
+  display: inline-block;
+  padding: 15px;
+  text-decoration: none;
+  background: #830044;
+  background: -webkit-linear-gradient(to top, #830044 10%, #ff0078 44%);
+  background: -moz-linear-gradient(to top, #830044 10%, #ff0078 44%);
+  background: linear-gradient(to top, #830044 10%, #ff0078 44%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background: #830044;
+  background: -webkit-linear-gradient(to top, #830044 10%, #ff0078 44%);
+  background: -moz-linear-gradient(to top, #830044 10%, #ff0078 44%);
+  background: linear-gradient(to top, #830044 10%, #ff0078 44%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  font-size: 3rem;
+  font-family: brat;
+}
+.navbar-mobile .mainMenu .closeMenu {
+  display: block;
+  position: absolute;
+  top: 0px;
+  right: 10px;
+  background: #830044;
+  background: -webkit-linear-gradient(to top, #830044 10%, #ff0078 44%);
+  background: -moz-linear-gradient(to top, #830044 10%, #ff0078 44%);
+  background: linear-gradient(to top, #830044 10%, #ff0078 44%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+.navbar-mobile .mainMenu .closeMenu,
+.navbar-mobile .mainMenu .icons i {
+  font-size: 2rem;
+  display: inline-block;
+  padding: 12px;
+  cursor: pointer;
+  background: #830044;
+  background: -webkit-linear-gradient(to top, #830044 10%, #ff0078 44%);
+  background: -moz-linear-gradient(to top, #830044 10%, #ff0078 44%);
+  background: linear-gradient(to top, #830044 10%, #ff0078 44%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+.navbar-mobile .mainMenu .icons {
+  align-self: end;
+  padding-bottom: 10px;
+}
+
+@media (min-width: 375px) {
+  .navbar-mobile .mainMenu .nav-items li a {
+    font-size: 3.25rem;
+  }
+}
+@media (min-width: 768px) {
+  .navbar-mobile {
+    display: none;
+  }
+}
 .video-overlay {
   background-color: rgba(0, 0, 0, 0.25);
   position: fixed;
@@ -217,6 +326,11 @@ a {
   }
   .wrapper .grid-item .content-wrapper h2 {
     font-size: 3.5rem;
+  }
+}
+@media (max-device-width: 1024px) and (orientation: landscape) {
+  .wrapper .grid-item .content-wrapper {
+    padding-bottom: 64px;
   }
 }
 

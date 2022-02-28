@@ -142,3 +142,13 @@
     }
   }
 }
+
+@media (max-device-width: 1024px) and (orientation: landscape) {
+  .wrapper {
+    .grid-item {
+      .content-wrapper {
+        padding-bottom: 64px;
+      }
+    }
+  }
+}
