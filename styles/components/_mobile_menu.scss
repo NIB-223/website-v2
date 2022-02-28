@@ -43,6 +43,7 @@ body {
     display: none;
     list-style: none;
     padding-inline-start: 0;
+    overflow-y: auto;
     .nav-items {
       align-self: end;
       li {
