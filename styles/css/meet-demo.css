@@ -1,0 +1,58 @@
+/*
+* Prefixed by https://autoprefixer.github.io
+* PostCSS: v8.3.6,
+* Autoprefixer: v10.3.1
+* Browsers: last 4 version
+*/
+
+body {
+    font-family: 'Roboto', sans-serif;
+}
+.live-demo h2 {
+    text-align: center;
+    font-size: 3rem!important;
+}
+
+.live-demo.container {
+    margin-top: 1rem!important;
+}
+
+.rotate {
+    text-align: center;
+}
+
+.btn {
+    cursor: pointer;
+    padding: 14px 62px;
+    border: none;
+    border-radius: 25px;
+    color: white;
+    font-weight: 600;
+    font-size: 1rem;
+    background-image: -webkit-gradient(linear, left bottom, right top, from(#215599), color-stop(#1e549e), color-stop(#1c54a2), color-stop(#1b53a7), color-stop(#1c52ab), color-stop(#1951b0), color-stop(#184fb5), color-stop(#194db9), color-stop(#184abf), color-stop(#1b47c5), color-stop(#2043ca), to(#283ecf));
+    background-image: -o-linear-gradient(left bottom, #215599, #1e549e, #1c54a2, #1b53a7, #1c52ab, #1951b0, #184fb5, #194db9, #184abf, #1b47c5, #2043ca, #283ecf);
+    background-image: linear-gradient(to right top, #215599, #1e549e, #1c54a2, #1b53a7, #1c52ab, #1951b0, #184fb5, #194db9, #184abf, #1b47c5, #2043ca, #283ecf);
+}
+
+.btn#portrait :hover,
+.btn :focus {
+    background-color: rgb(196, 196, 196);
+    -webkit-transition: .5s;
+    -o-transition: .5s;
+    transition: .5s;
+}
+
+#demo-container {
+    text-align: center;
+    margin-top: 2rem;
+}
+
+#desktop-demo {
+    display: none;
+}
+
+.video-rotate {
+    -webkit-transform: rotate(270deg);
+        -ms-transform: rotate(270deg);
+            transform: rotate(270deg);
+}

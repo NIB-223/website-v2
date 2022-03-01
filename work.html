@@ -5,11 +5,201 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>My Work</title>
+    <link rel="shortcut icon" href="./img/logo.png" type="image/x-icon" />
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.min.css" rel="normalizer">
+    <link rel="stylesheet" type="text/css" href="styles/css/main.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Jura&family=Neonderthaw&family=Questrial&display=swap"
+        rel="stylesheet">
+    <script src="https://kit.fontawesome.com/3116d9e728.js" crossorigin="anonymous"></script>
 </head>
 
 <body>
 
+
+    <!--DESKTOP/MOBILE HEADERS-->
+
+    <header id="header">
+
+        <!--mobile header-->
+        <nav class="navbar-mobile">
+            <div class="logo"><a class="underlined-logo logo-hover" href="index.html" title="Home">
+                    <img src="./img/logo.png">
+                </a></div>
+            <div class="openMenu"><i class="fa fa-bars"></i></div>
+            <ul class="mainMenu">
+                <div class="nav-items">
+                    <li><a class="underlined about-hover" href="about.html">About</a></li>
+                    <li><a class="underlined work-hover" href="work.html">Work</a></li>
+                    <li><a class="underlined contact-hover" href="mailto: robertu.dev@gmail.com">Contact</a></li>
+                </div>
+
+                <div class="closeMenu"><i class="fa fa-times"></i></div>
+                <div class="icons">
+                    <a target="_blank" title="Github" href="https://github.com/Drxl95"><i
+                            class="fa-brands fa-github-alt"></i></a>
+                    <a target="_blank" title="LinkedIn" href="https://www.linkedin.com/in/robert-uebelhor/"><i
+                            class="fa-brands fa-linkedin-in"></i></a>
+                </div>
+            </ul>
+        </nav>
+
+
+        <!--desktop header-->
+        <nav class="desktop-header">
+            <div class="navbar">
+
+                <!--logo-->
+                <div class="logo">
+                    <a class="logo-hover" href="index.html" title="Home">
+                        <img src="./img/logo.png">
+                    </a>
+                </div>
+
+                <!--navbar menu-->
+                <div class="navbar-menu">
+                    <div class="nav-items">
+                        <a class="underlined about-hover" href="about.html" title="About">&nbsp;About&nbsp;</a>
+                    </div>
+                    <div class="nav-items">
+                        <a class="underlined work-hover" href="work.html" title="Work">&nbsp;Work&nbsp;</a>
+                    </div>
+                    <div class="nav-items">
+                        <a class="underlined contact-hover" href="mailto: robertu.dev@gmail.com"
+                            title="Contact">&nbsp;Contact&nbsp;</a>
+                    </div>
+
+                    <!--social-->
+                    <div class="social-container">
+                        <a target="_blank" title="Github" href="https://github.com/Drxl95"><i
+                                class="fa-brands fa-github-alt"></i></a>
+                        <a target="_blank" title="LinkedIn" href="https://www.linkedin.com/in/robert-uebelhor/"><i
+                                class="fa-brands fa-linkedin-in"></i></a>
+                    </div>
+                </div>
+
+            </div>
+        </nav>
+
+    </header>
+
+
+
+    <!--Work Content-->
+
+    <!--work container-->
+    <div class="work-wrapper">
+        <h1 class="underlined title">My Work</h1>
+        <div class="work-list-wrapper">
+            <ul class="work-list">
+
+                <!--MyFlix (MERN)-->
+                <li>
+                    <img src="./img/mockup-myflix.jpg" alt="myFlix-project">
+                    <div class="project-text">
+                        <h2>MyFlix</h2>
+                        <p>A membership based movie database app that displays a list of movies and info about the
+                            movie, genre, and
+                            director. Users can create an account, edit their
+                            information, and create a list of favorite movies.</p>
+                        <div class="project-links">
+                            <a class="project-icon" target="_blank" title="Github"
+                                href="https://github.com/Drxl95/myFlix-client"><i
+                                    class="fa-brands fa-github-alt work-github"></i>&nbsp;</a>
+                            <a class="project-icon" target="_blank" title="Visit"
+                                href="https://myflix20.netlify.app/"><i
+                                    class="fa-solid fa-arrow-up-right-from-square"></i></a>
+                            <a class="project-icon" target="_blank" title="Case Study" href="movie-api.html">
+                                <i class="fa-solid fa-arrow-right-long"></i>
+                            </a>
+                        </div>
+                    </div>
+                </li>
+
+                <!--MeetMe-->
+                <li>
+                    <picture>
+                        <source srcset="./mockups/meet-mockup.webp" type="image/webp">
+                        <source srcset="./mockups/meet-mockup.png" type="image/png">
+                        <img src="./mockups/meet-mockup.png" alt="meetme">
+                    </picture>
+
+                    <div class="project-text">
+                        <h2>MeetMe</h2>
+                        <p>PWA that was built with React using a test-driven and behavior
+                            driven development
+                            approach . It consists of a Google Calendar API to fetch upcoming events, and a
+                            serverless function hosted by
+                            AWS.
+                            Users can select a city from a list of suggestions or see all cities, and they can also
+                            choose the number of
+                            events to see. It also includes a scatter plot and pie chart.</p>
+                        <div class="project-links">
+                            <a class="project-icon" target="_blank" title="Github"
+                                href="https://github.com/Drxl95/meet"><i
+                                    class="fa-brands fa-github-alt work-github"></i>&nbsp;</a>
+                            <a class="project-icon" target="_blank" href="https://drxl95.github.io/meet/"
+                                title="Visit"><i class="fa-solid fa-arrow-up-right-from-square"></i></a>
+                            <a class="project-icon" target="_blank" title="Demo" href="meet-demo.html">
+                                <i class="fa-solid fa-arrow-right-long"></i>
+                            </a>
+                        </div>
+                    </div>
+                </li>
+
+                <!--ChitChat-->
+                <li>
+                    <picture>
+                        <source srcset="./mockups/chat-mockup.webp" type="image/webp">
+                        <source srcset="./mockups/chat-mockup.png" type="image/png">
+                        <img src="img/chat-app/chat.png" alt="chat-app">
+                    </picture>
+
+                    <div class="project-text">
+                        <h2>ChitChat</h2>
+                        <p> Chat app built with React Native. Allows for sharing location, picures, and messages.</p>
+                        <div class="project-links">
+                            <a class="project-icon" target="_blank" title="Github"
+                                href="https://github.com/Drxl95/chat-app"><i
+                                    class="fa-brands fa-github-alt work-github"></i>&nbsp;</a>
+                        </div>
+                    </div>
+                </li>
+
+                <!--MyFlix (Angular)-->
+                <li>
+                    <picture>
+                        <source srcset="mockups/angular-mockup-main.webp" type="image/webp">
+                        <source srcset="mockups/angular-mockup-main.png" type="image/png">
+                        <img src="./mockups/angular-mockup-main.png" alt="angular-app">
+                    </picture>
+
+                    <div class="project-text">
+                        <h2>MyFlix (Angular)</h2>
+                        <p>Angular version of the MyFlix front-end.</p>
+                        <div class="project-links">
+                            <a class="project-icon" target="_blank" title="Github"
+                                href="https://github.com/Drxl95/myFlix-Angular"><i
+                                    class="fa-brands fa-github-alt work-github"></i>&nbsp;</a>
+                            <a class="project-icon" target="_blank"
+                                href="https://drxl95.github.io/myFlix-Angular/welcome" title="Demo"><i
+                                    class="fa-solid fa-arrow-up-right-from-square"></i></a>
+                            <a class="project-icon" target="_blank" title="Case Study" href="angular.html">
+                                <i class="fa-solid fa-arrow-right-long"></i>
+                            </a>
+                        </div>
+                    </div>
+                </li>
+
+            </ul>
+        </div>
+
+    </div>
+
+
 </body>
+<script src="./js/main.js"></script>
 
 </html>

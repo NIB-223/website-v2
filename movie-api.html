@@ -1,0 +1,201 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="keywords"
+        content="personal website, portfolio, skills, services, web development, software engineer, software developer, design, RESTful">
+    <title>myFlix</title>
+    <link rel="shortcut icon" href="./img/myFlix-logo.jpg" type="image/x-icon" />
+    <link rel="stylesheet" type="text/css" href="./styles/css/movie-api.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat&display=swap" rel="stylesheet">
+</head>
+
+<body>
+
+    <!--Top Section-->
+
+    <main id="main-container">
+        <section class="top-section">
+            <div class="top-section__title">
+                <h1 class="top-section__title--name">MyFlix</h1>
+                <h3 class="top-section__title--tools">MongoDB | Express | React | Redux | Node.js </h3>
+                <div class="top-section__title--links">
+                    <button type="button" class="btn btn-default"><a href="https://myflix20.netlify.app/"
+                            target="_blank">Visit</a></button>
+                    <button type="button" class="btn btn-default"><a href="https://github.com/Drxl95/myFlix-client"
+                            target="_blank">Github (Frontend)</a></button>
+                    <button type="button" class="btn btn-default"><a href="https://github.com/Drxl95/movie_api"
+                            target="_blank">Github (Backend)</a></button>
+                    <button id="desktop-demo-btn" type="button" class="btn btn-default"><a
+                            href="#demo-container">Demo</a></button>
+                    <a id="desktop-demo" href="media/myFlix-Iphone-LiveDemo.mp4" target="_blank"><button type="button"
+                            class="btn btn-default">Demo</button>
+                        <video width="500px" height="700px" controls autoplay>
+                            <source src="media/myFlix-Iphone-LiveDemo.mp4" type="video/mp4">
+                            <source src="media/myFlix-Iphone-LiveDemo.ogg" type="video/ogg">
+                            Your browser does not support the video tag.
+                        </video>
+                    </a>
+                </div>
+            </div>
+
+            <div class="top-section__descr--grid">
+                <div class="top-section__intro1">
+                    <h1 class="top-section__intro--title"><u>Overview</u></h1>
+                    <p class="top-section__intro--p">This is a movie-themed RESTful API I built that utilizes the MERN
+                        stack. The project consists of
+                        a list of movies in the form of cards, which has an image and description of the
+                        movie, the director, genre, and actors. Not only can this app be used for reference, but users
+                        are also able to create an account and add movies to their "favorite movies" list. The user also
+                        has a
+                        profile page where they can edit personal information and delete their account if they wish.
+                    </p>
+                </div>
+                <div class="top-section__intro2">
+                    <h1 class="top-section__intro--title"><u>Purpose</u></h1>
+                    <p class="top-section__intro--p">The purpose of this project was to expose myself to the components
+                        of backend web development, more specifically server side logic via Node.js as well as creating
+                        and
+                        maintaining a database with Mongo. Along with the backend, I also exposed myself to React, a JS
+                        framework,
+                        as well as Redux for managing states.
+                    </p>
+                </div>
+                <img class="top-section__img--gridItem3" src="img/myFlix-scrnshtt/mockup-myflix.jpg" alt="RESTful API"
+                    loading="lazy" />
+            </div>
+        </section>
+
+        <!--Banner-->
+
+        <div class="banner">
+        </div>
+        <div class="ios-banner">
+
+        </div>
+
+        <!--Middle Section-->
+
+        <section style="margin: 0 3rem;">
+            <h2 class="middle-section__title">The Journey</h2>
+            <h3 class="middle-section__subtitle"><u>The Backend</u></h3>
+            <button type="button" class="btn btn-default"><a target="_blank"
+                    href="https://myflixdb20.herokuapp.com/documentation.html">Documentation</a></button>
+            <div class="middle-section__journey--grid1">
+                <div class="grid-item1">
+                    <a href="img/myFlix-scrnshtt/Postman-test.jpg" target="_blank">
+                        <img class="middle-section__journey--image" src="img/myFlix-scrnshtt/Postman-test.jpg"
+                            alt="postman" loading="lazy" />
+                    </a>
+                </div>
+                <div class="grid-item2">
+                    <p class="middle-section__journey--p">The journey began with learning about CRUD Operations and
+                        their correlative HTTP methods to create
+                        the endpoints, which were then tested with Postman. Once these passed I created a database with
+                        PostgreSQL first for some exposure to relational databases,
+                        then implemented the data into Mongo. Finally I created my models with Mongoose. <br><br>
+                        Along with any other account-based website, security, authentication, and authorization are
+                        paramount. I needed to create
+                        a JWT token-based authentication system and authorize my endpoints, this ensures that only
+                        registered users
+                        can view movies and other important info, otherwise no one would need to login or even create an
+                        account!
+                        All of this was tested with Postman. <br> <br> The final step of the backend process was
+                        creating a CORS policy, add input validation to
+                        ensure users enter the correct credentials when creating an account, and hashing their
+                        passwords. <br>
+                        Last but not least, I launched my database via Atlas and my API with heroku before uploading it
+                        to Netlify.
+                    </p>
+                </div>
+
+                <div class="grid-item3">
+                    <a href="img/myFlix-scrnshtt/sql.jpg" target="_blank">
+                        <img class="middle-section__journey--image" src="img/myFlix-scrnshtt/sql.jpg" alt="sql"
+                            loading="lazy" />
+                    </a>
+                </div>
+                <div class="grid-item4">
+                    <a href="img/myFlix-scrnshtt/mongo.jpg" target="_blank">
+                        <img class="middle-section__journey--image" src="img/myFlix-scrnshtt/mongo.jpg" alt="mongo"
+                            loading="lazy" />
+                    </a>
+                </div>
+            </div>
+            <h3 class="middle-section__subtitle"><u>The Frontend</u></h3>
+            <button type="button" class="btn btn-default"><a
+                    href="https://github.com/Drxl95/myFlix-client/blob/main/README.md"
+                    target="_blank">Documentation</a></button>
+            <div class="middle-section__journey--grid2">
+                <div class="grid2-item1">
+                    <p class="middle-section__journey--p">
+                        The frontend of my app began with building the client from scratch. This was accomplished
+                        by installing React via Parcel, a bundler. After installation I began creating my
+                        components, props, and states and then routed them with React-Router and axios. The styling on
+                        this project was done via Bootstrap, and
+                        finally Redux was implemented for state management.
+                    </p>
+                </div>
+                <div class="grid2-item2">
+                    <img src="img/myFlix-scrnshtt/iphone-mockup-final.jpg" class="middle-section__journey--image"
+                        loading="lazy">
+                </div>
+                <img class="grid2-item3" src="img/myFlix-scrnshtt/ipad-mockup-final.jpg" alt="RESTful API"
+                    loading="lazy">
+            </div>
+        </section>
+
+        <!--End-->
+
+        <section id="end">
+            <h2 class="end-section__title">Reflections</h2>
+            <div class="end__grid">
+                <picture>
+                    <source srcset="img/myFlix-scrnshtt/mern.webp" type="image/webp">
+                    <source srcset="img/myFlix-scrnshtt/mern.jpg" type="image/jpg">
+                    <img class="end__section--image" src="img/myFlix-scrnshtt/mern.jpg" alt="MERN" loading="lazy">
+                </picture>
+
+                <p class="end__section--descr">I found this project to be very educational while at the same time a
+                    great challenge. The backend was a lot more enjoyable as I ran into less problems with my code and
+                    technique. The only place I struggled with was using Postman to test my endpoints. However, after
+                    much trial and error, I figured out how to set up my endpoints properly and I also learned how to
+                    test with Postman the right way.
+                    On the frontend, I found React to be rather difficult and hard to pick up and I needed a lot of help
+                    with my code, especially when routing my components. Thanks to the help of my tutor and internet
+                    research, I was able to get this project done! I learned a lot about React and I am excited to
+                    continue learning about it.
+                </p>
+            </div>
+        </section>
+
+        <div class="live-demo">
+            <h2 class="live-demo-title">Demo</h2>
+            <div class="rotate">
+                <button id="portrait" type="button" class="btn btn-default">Portrait</button>
+                <button title="double-click" id="landscape" type="button" class="btn btn-default"><a id="timestamp-link"
+                        class="landscape">Landscape</a></button>
+                <br>
+                <p style="font-size: 1rem;">(Landscape button may need to be double-clicked)</p>
+            </div>
+
+            <div id="demo-container">
+                <video id="video" width="500px" height="700px" controls autoplay>
+                    <source src="media/myFlix-Iphone-LiveDemo.mp4" type="video/mp4">
+                    <source src="media/myFlix-Iphone-LiveDemo.ogg" type="video/ogg">
+                    Your browser does not support the video tag.
+                </video>
+            </div>
+        </div>
+    </main>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.0.0/jquery.min.js"></script>
+    <script src="https://code.jquery.com/jquery-3.5.1.js"
+        integrity="sha256-QWo7LDvxbWT2tbbQ97B53yJnYU3WhH/C8ycbRAkjPDc=" crossorigin="anonymous"></script>
+    <script src="./js/movie-api.js" defer></script>
+    <script type="text/javascript" src="./js/jquery.min.js"></script>
+</body>
+
+</html>

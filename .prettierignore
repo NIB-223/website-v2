@@ -1,0 +1,4 @@
+/* ingnore minified files */
+angular.min.css
+meet-demo.min.css
+movie-api.min.css

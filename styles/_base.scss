@@ -5,3 +5,18 @@
 body {
   margin: 0;
 }
+
+::-webkit-scrollbar {
+  width: 3px;
+}
+::-webkit-scrollbar-track {
+  border: 7px solid #232323;
+}
+::-webkit-scrollbar-thumb {
+  background: #830044;
+  background: -webkit-linear-gradient(to top, #830044 10%, #ff0078 44%);
+  background: -moz-linear-gradient(to top, #830044 10%, #ff0078 44%);
+  background: linear-gradient(to top, #830044 10%, #ff0078 44%);
+  border-radius: 10px;
+  width: 2px;
+}

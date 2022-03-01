@@ -36,12 +36,14 @@
       position: relative;
       display: grid;
       justify-items: center;
+      margin-top: 20vh;
       img {
         width: 350px;
         max-width: 100%;
         padding: 0 32px;
         transform: rotate(180deg);
         filter: brightness(85%);
+        position: relative;
       }
       h1 {
         background: linear-gradient(

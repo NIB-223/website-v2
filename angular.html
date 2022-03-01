@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="keywords"
+        content="personal website, portfolio, skills, services, web development, software engineer, software developer, design, RESTful">
+    <title>myFlix Angular</title>
+    <link rel="stylesheet" type="text/css" href="./styles/css/angular.min.css">
+    <link rel=" preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@500&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat&display=swap" rel="stylesheet">
+</head>
+
+<body>
+
+    <!--Top Section-->
+
+    <main id="main-container">
+        <header class="header">
+            <h1 class="header-title">MyFlix (Angular)</h1>
+            <h3 class="header-tools">Angular | Angular Material </h3>
+            <div class="header-buttons">
+                <button type="button" class="btn btn-default"><a href="https://drxl95.github.io/myFlix-Angular/welcome"
+                        target="_blank">Visit</a></button>
+                <button type="button" class="btn btn-default"><a href="https://github.com/Drxl95/myFlix-Angular"
+                        target="_blank">Github (Frontend)</a></button>
+                <button type="button" class="btn btn-default"><a href="https://github.com/Drxl95/movie_api"
+                        target="_blank">Github (Backend)</a></button>
+                <button id="desktop-demo-btn" type="button" class="btn btn-default"><a
+                        href="#demo-container">Demo</a></button>
+                <a id="desktop-demo" href="media/angular.mp4" target="_blank"><button style="color: white!important;"
+                        type="button" class="btn btn-default">Demo</button>
+                    <video width="500px" height="700px" controls autoplay>
+                        <source src="media/angular.mp4" type="video/mp4">
+                        <source src="media/angular.ogg" type="video/ogg">
+                        Your browser does not support the video tag.
+                    </video>
+                </a>
+            </div>
+
+            <div class="overview-grid">
+                <div class="grid-item1">
+                    <h1 class="grid-item1-title">Overview</h1>
+                    <p class="grid-item1-text">This is the front-end of a previous project that I built. It is a RESTful
+                        API that I built with
+                        Node.js and React. This project can be viewed here. I built this front-end with Angular and
+                        Angular Material. It includes all the
+                        same endpoints, allowing for users to create accounts, view movies and their info (genre,
+                        director, actors, synopsis) as well as add
+                        movies to their favorites list. Users can also edit some of their profile information. This app
+                        primarily uses modals to display
+                        data.
+                    </p>
+                </div>
+            </div>
+        </header>
+
+        <!--Banners-->
+
+        <div class="banner">
+        </div>
+        <div class="ios-banner">
+        </div>
+
+        <!--Middle Section-->
+
+        <section class="middle-section">
+            <h2 class="middle-section-title">The Journey</h2>
+            <div class="project-mgmnt-grid">
+                <div class="project-grid-item1">
+                    <h1 class="project-grid-item1-title">Project Management</h1>
+                    <p class="project-grid-item1-text">I first began my journey by learning about collaboration with
+                        designers and project management techniques and common materials.
+                        This was primarily focused on the very common Agile methods, Scrum and Kanban. After learning
+                        about the different types of meetings that take place
+                        with Scrum, such as Sprint Planning, Stand-Up, and Iteration ration Review, I began learning
+                        about and working on Kanban boards. Upon learning about this type
+                        of framework, I built my own for this project. My board consisted of 3 columns, "To-Do, "In
+                        Progress", and "Done".
+                    </p>
+                </div>
+                <div class="project-grid-item2">
+                    <a href="./img/angular/kanban.jpg" target="_blank">
+                        <picture>
+                            <source srcset="./img/angular/kanban.webp" type="image/webp">
+                            <source srcset="./img/angular/kanban.jpg" type="image/jpg">
+                            <img class="project-grid-item2-img" src="./img/angular/kanban.jpg" alt="kanban"
+                                loading="lazy">
+                        </picture>
+                    </a>
+                </div>
+
+            </div>
+        </section>
+
+        <div class="banner2">
+        </div>
+        <div class="ios-banner2">
+        </div>
+
+        <!--Bottom Section-->
+
+        <section class="bottom-grid">
+            <div class="bottom-grid-item1">
+                <h1 class="bottom-grid-item1-title">TypesScript Angular Material</h1>
+                <p class="bottom-grid-item1-text">The project began with an introduction to the installation process of
+                    Angular 13, as well as using the CLI.
+                    I learned about how the modules worked in Angular, as well as data binding and templates. I found it
+                    interesting that
+                    components could be simulated for testing. Finally, I practiced TypesScript.
+                    The actual project began with creating my endpoints in the "fetch-api-data.service.ts" file, then
+                    generating components and adding
+                    dialog boxes and cards via Angular Material. I also created a navbar and sidenav for navigation, as
+                    well as functions for changing the
+                    "favorite" icons in the movie cards so users have the option of selecting movies to add to their
+                    favorites list. The final step was documenting
+                    my code via TypeDoc.
+                    Although Angular has a steep learning curve and definitely proposed many challenges, I got help and
+                    was able to finish the project, and I am
+                    very happy to have been exposed to this framework as well as TypesScript.
+                </p>
+            </div>
+
+            <div class="bottom-grid-item2">
+                <picture>
+                    <source srcset="./mockups/angular-mockup-ipad.webp" type="image/webp">
+                    <source srcset="./mockups/angular-mockup-ipad.jpg" type="image/jpg">
+                    <img src="./mockups/angular-mockup-ipad.jpg" alt="mockup" loading="lazy">
+                </picture>
+            </div>
+        </section>
+
+        <div class="live-demo">
+            <h2 class="live-demo-title">Demo</h2>
+            <div class="rotate">
+                <button id="portrait" type="button" class="btn btn-default"
+                    style="color: white!important;">Portrait</button>
+                <button title="double-click" id="landscape" type="button" class="btn btn-default"><a id="timestamp-link"
+                        class="landscape">Landscape</a></button>
+                <br>
+                <p style="font-size: 1rem;">(Landscape button may need to be double-clicked)</p>
+            </div>
+
+            <div id="demo-container">
+                <video id="video" width="500px" height="700px" controls autoplay>
+                    <source src="media/angular.mp4" type="video/mp4">
+                    <source src="media/angular.ogg" type="video/ogg">
+                    Your browser does not support the video tag.
+                </video>
+            </div>
+        </div>
+    </main>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.0.0/jquery.min.js"></script>
+    <script src="https://code.jquery.com/jquery-3.5.1.js"
+        integrity="sha256-QWo7LDvxbWT2tbbQ97B53yJnYU3WhH/C8ycbRAkjPDc=" crossorigin="anonymous"></script>
+    <script src="./js/angular.js" defer></script>
+    <script type="text/javascript" src="./js/jquery.min.js"></script>
+</body>
+
+</html>
