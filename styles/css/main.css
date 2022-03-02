@@ -52,7 +52,7 @@ a {
   justify-content: space-between;
   align-items: center;
   gap: 36px;
-  padding-top: 64px;
+  padding-top: 80px;
 }
 .desktop-header .navbar .logo {
   display: flex;
@@ -141,7 +141,7 @@ body {
   background: transparent;
   display: flex;
   justify-content: space-between;
-  padding-top: 60px;
+  padding-top: 48px;
 }
 .navbar-mobile .logo {
   align-self: center;
