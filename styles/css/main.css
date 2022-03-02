@@ -316,10 +316,10 @@ body {
 
 @keyframes page-transition-top {
   from {
-    transform: translate3d(0, 0, 0);
+    transform: translateY(0);
   }
   to {
-    transform: translate3d(0, -92vh, 0);
+    transform: translateY(-92%);
   }
 }
 .main-transition-overlay2 {
@@ -342,10 +342,10 @@ body {
 
 @keyframes page-transition-bottom {
   from {
-    transform: translate3d(0, 0, 0);
+    transform: translateY(0);
   }
   to {
-    transform: translate3d(0, 92vh, 0);
+    transform: translateY(92%);
   }
 }
 .logo-preloader {
@@ -506,7 +506,7 @@ body {
     transform: translate3d(0, 0, 0);
   }
   to {
-    transform: translate3d(0, 92vh, 0);
+    transform: translate3d(0, 92%, 0);
   }
 }
 @keyframes page-transition-top {
@@ -514,7 +514,7 @@ body {
     transform: translate3d(0, 0, 0);
   }
   to {
-    transform: translate3d(0, -92vh, 0);
+    transform: translate3d(0, -92%, 0);
   }
 }
 body {
@@ -565,7 +565,7 @@ a {
     transform: translate3d(0, 0, 0);
   }
   to {
-    transform: translate3d(0, 92vh, 0);
+    transform: translate3d(0, 92%, 0);
   }
 }
 @keyframes page-transition-top {
@@ -573,7 +573,7 @@ a {
     transform: translate3d(0, 0, 0);
   }
   to {
-    transform: translate3d(0, -92vh, 0);
+    transform: translate3d(0, -92%, 0);
   }
 }
 .work-wrapper {

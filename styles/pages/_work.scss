@@ -48,7 +48,7 @@ a {
     transform: translate3d(0, 0, 0);
   }
   to {
-    transform: translate3d(0, 92vh, 0);
+    transform: translate3d(0, 92%, 0);
   }
 }
 @keyframes page-transition-top {
@@ -56,7 +56,7 @@ a {
     transform: translate3d(0, 0, 0);
   }
   to {
-    transform: translate3d(0, -92vh, 0);
+    transform: translate3d(0, -92%, 0);
   }
 }
 

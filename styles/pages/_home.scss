@@ -51,10 +51,10 @@
 }
 @keyframes page-transition-top {
   from {
-    transform: translate3d(0, 0, 0);
+    transform: translateY(0);
   }
   to {
-    transform: translate3d(0, -92vh, 0);
+    transform: translateY(-92%);
   }
 }
 .main-transition-overlay2 {
@@ -78,10 +78,10 @@
 }
 @keyframes page-transition-bottom {
   from {
-    transform: translate3d(0, 0, 0);
+    transform: translateY(0);
   }
   to {
-    transform: translate3d(0, 92vh, 0);
+    transform: translateY(92%);
   }
 }
 
