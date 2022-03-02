@@ -363,12 +363,28 @@ body {
   animation-timing-function: ease;
 }
 
-@keyframes logo-preloader {
+@-webkit-keyframes logo-preloader {
   0% {
     opacity: 1;
+    -webkit-transform: translateY(-50%) translateX(-50%) rotate(0deg);
     transform: translateY(-50%) translateX(-50%) rotate(0deg);
   }
   99% {
+    -webkit-transform: translateY(-50%) translateX(-50%) rotate(360deg);
+    transform: translateY(-50%) translateX(-50%) rotate(360deg);
+  }
+  100% {
+    opacity: 0;
+  }
+}
+@keyframes logo-preloader {
+  0% {
+    opacity: 1;
+    -webkit-transform: translateY(-50%) translateX(-50%) rotate(0deg);
+    transform: translateY(-50%) translateX(-50%) rotate(0deg);
+  }
+  99% {
+    -webkit-transform: translateY(-50%) translateX(-50%) rotate(360deg);
     transform: translateY(-50%) translateX(-50%) rotate(360deg);
   }
   100% {
