@@ -141,7 +141,7 @@ body {
   background: transparent;
   display: flex;
   justify-content: space-between;
-  padding-top: 40px;
+  padding-top: 60px;
 }
 .navbar-mobile .logo {
   align-self: center;
