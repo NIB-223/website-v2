@@ -260,7 +260,7 @@ body {
 }
 .navbar-mobile .mainMenu .icons {
   align-self: end;
-  padding-bottom: 30px;
+  padding-bottom: 5vh;
 }
 
 @media (min-width: 375px) {
