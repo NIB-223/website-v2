@@ -23,7 +23,14 @@
     <!--HOME PAGE SECTION-->
     <main class="main-page">
 
-        <!--Overlay-->
+        <!--main screen transition overlay-->
+        <div>
+            <div class="main-transition-overlay1"></div>
+            <div class="main-transition-overlay2"></div>
+            <img class="logo-preloader" src="./img/logo.png">
+        </div>
+
+        <!--Video Overlay-->
         <div class="video-overlay"></div>
 
         <!--Video-->
@@ -32,8 +39,6 @@
             <source src="./media/Retro Background 01.mp4" type="video/mp4">
             <source src="./media/Retro Background 01.ogv" type="video/ogv">
         </video>
-
-
 
 
         <!--DESKTOP/MOBILE HEADERS-->
@@ -119,9 +124,12 @@
 
     </main>
 
-
-
+    <script src="./js/main.js"></script>
+    <script type="text/javscript">
+        setTimeout(function() {
+            window.location.href="http://127.0.0.1:5501/work.html";
+        }, 10000);
+    </script>
 </body>
-<script src="./js/main.js"></script>
 
 </html>

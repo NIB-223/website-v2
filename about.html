@@ -5,11 +5,95 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>About Met</title>
+    <link rel="shortcut icon" href="./img/logo.png" type="image/x-icon" />
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.min.css" rel="normalizer">
+    <link rel="stylesheet" type="text/css" href="styles/css/main.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Jura&family=Neonderthaw&family=Questrial&display=swap"
+        rel="stylesheet">
+    <script src="https://kit.fontawesome.com/3116d9e728.js" crossorigin="anonymous"></script>
 </head>
 
 <body>
 
+
+    <!--Screen transition overlay-->
+    <div>
+        <div class="transition-overlay1"></div>
+        <div class="transition-overlay2"></div>
+    </div>
+
+    <!--DESKTOP/MOBILE HEADERS-->
+
+    <header id="header">
+
+        <!--mobile header-->
+        <nav class="navbar-mobile">
+            <div class="logo"><a class="underlined-logo logo-hover" href="index.html" title="Home">
+                    <img src="./img/logo.png">
+                </a></div>
+            <div class="openMenu"><i class="fa fa-bars"></i></div>
+            <ul class="mainMenu">
+                <div class="nav-items">
+                    <li><a class="underlined about-hover" href="about.html">About</a></li>
+                    <li><a class="underlined work-hover" href="work.html">Work</a></li>
+                    <li><a class="underlined contact-hover" href="mailto: robertu.dev@gmail.com">Contact</a></li>
+                </div>
+
+                <div class="closeMenu"><i class="fa fa-times"></i></div>
+                <div class="icons">
+                    <a target="_blank" title="Github" href="https://github.com/Drxl95"><i
+                            class="fa-brands fa-github-alt"></i></a>
+                    <a target="_blank" title="LinkedIn" href="https://www.linkedin.com/in/robert-uebelhor/"><i
+                            class="fa-brands fa-linkedin-in"></i></a>
+                </div>
+            </ul>
+        </nav>
+
+
+        <!--desktop header-->
+        <nav class="desktop-header">
+            <div class="navbar">
+
+                <!--logo-->
+                <div class="logo">
+                    <a class="logo-hover" href="index.html" title="Home">
+                        <img src="./img/logo.png">
+                    </a>
+                </div>
+
+                <!--navbar menu-->
+                <div class="navbar-menu">
+                    <div class="nav-items">
+                        <a class="underlined about-hover" href="about.html" title="About">&nbsp;About&nbsp;</a>
+                    </div>
+                    <div class="nav-items">
+                        <a class="underlined work-hover" href="work.html" title="Work">&nbsp;Work&nbsp;</a>
+                    </div>
+                    <div class="nav-items">
+                        <a class="underlined contact-hover" href="mailto: robertu.dev@gmail.com"
+                            title="Contact">&nbsp;Contact&nbsp;</a>
+                    </div>
+
+                    <!--social-->
+                    <div class="social-container">
+                        <a target="_blank" title="Github" href="https://github.com/Drxl95"><i
+                                class="fa-brands fa-github-alt"></i></a>
+                        <a target="_blank" title="LinkedIn" href="https://www.linkedin.com/in/robert-uebelhor/"><i
+                                class="fa-brands fa-linkedin-in"></i></a>
+                    </div>
+                </div>
+
+            </div>
+        </nav>
+
+    </header>
+
+
+    <script src="./js/main.js"></script>
+    <script src="./node_modules/swup/dist/swup.min.js"></script>
 </body>
 
 </html>

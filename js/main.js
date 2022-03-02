@@ -14,3 +14,6 @@ function show() {
 function close() {
     mainMenu.style.top = '-120%';
 }
+
+
+
