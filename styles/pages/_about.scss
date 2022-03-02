@@ -36,17 +36,17 @@
 }
 @keyframes page-transition-bottom {
   from {
-    transform: translateY(0);
+    transform: translate3d(0, 0, 0);
   }
   to {
-    transform: translateY(92%);
+    transform: translate3d(0, 92vh, 0);
   }
 }
 @keyframes page-transition-top {
   from {
-    transform: translateY(0);
+    transform: translate3d(0, 0, 0);
   }
   to {
-    transform: translateY(-92%);
+    transform: translate3d(0, -92vh, 0);
   }
 }

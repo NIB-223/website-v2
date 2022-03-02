@@ -101,8 +101,8 @@ body {
     .closeMenu {
       display: block;
       position: absolute;
-      top: 0px;
-      right: 10px;
+      top: 2.5vh;
+      right: 5vw;
       background: #830044;
       background: -webkit-linear-gradient(to top, #830044 10%, #ff0078 44%);
       background: -moz-linear-gradient(to top, #830044 10%, #ff0078 44%);
@@ -125,7 +125,7 @@ body {
     }
     .icons {
       align-self: end;
-      padding-bottom: 10px;
+      padding-bottom: 30px;
     }
   }
 }
