@@ -259,8 +259,8 @@ body {
   -webkit-text-fill-color: transparent;
 }
 .navbar-mobile .mainMenu .icons {
-  align-self: end;
-  padding-bottom: 5vh;
+  text-align: center;
+  margin-top: 56px;
 }
 
 @media (min-width: 375px) {
