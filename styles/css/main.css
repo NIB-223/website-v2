@@ -152,7 +152,7 @@ body {
 .navbar-mobile .logo img {
   width: 64px;
 }
-.navbar-mobile .openMenu {
+.navbar-mobile .openMenu i {
   font-size: 2rem;
   margin: 20px;
   display: block;
@@ -233,7 +233,7 @@ body {
   transform: scale(1);
   transform-origin: bottom left;
 }
-.navbar-mobile .mainMenu .closeMenu {
+.navbar-mobile .mainMenu .closeMenu i {
   display: block;
   position: absolute;
   top: 2.5vh;

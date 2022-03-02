@@ -16,7 +16,7 @@ body {
       width: 64px;
     }
   }
-  .openMenu {
+  .openMenu i {
     font-size: 2rem;
     margin: 20px;
     display: block;
@@ -98,7 +98,7 @@ body {
       }
     }
 
-    .closeMenu {
+    .closeMenu i {
       display: block;
       position: absolute;
       top: 2.5vh;
