@@ -50,3 +50,136 @@
     transform: translateY(-46vh);
   }
 }
+
+.pages-content-wrapper {
+  position: relative;
+  z-index: 1;
+}
+
+.button-wrapper {
+  text-align: left;
+  margin-top: 36px;
+  a {
+    padding: 6px 40px;
+    background: #830044;
+    background: -webkit-linear-gradient(to top, #830044 10%, #ff0078 44%);
+    background: -moz-linear-gradient(to top, #830044 10%, #ff0078 44%);
+    background: linear-gradient(to top, #830044 10%, #ff0078 44%);
+  }
+}
+
+.graph-wrapper {
+  overflow: hidden;
+  height: 50vh;
+  .graph {
+    background: linear-gradient(
+        180deg,
+        rgba(0, 0, 0, 0) 0px,
+        rgba(12, 191, 233, 0.5) 0%,
+        rgba(12, 191, 233, 0.5) 3px,
+        rgba(0, 0, 0, 0) 0px
+      ),
+      linear-gradient(
+        90deg,
+        rgba(0, 0, 0, 0) 0px,
+        rgba(12, 191, 233, 0.5) 0%,
+        rgba(12, 191, 233, 0.5) 3px,
+        rgba(0, 0, 0, 0) 0px
+      );
+    background-size: 4em 2em, 4em 2em;
+    height: 30em;
+    perspective: 1000px;
+    transform: perspective(200px) rotateX(45deg) scale(2);
+  }
+}
+
+@media (min-width: map-get($viewport_size, m)) {
+  .sun {
+    display: flex;
+    margin-left: auto;
+    margin-right: 56px;
+    width: 250px;
+    height: 250px;
+    border-radius: 100%;
+    background: #830044;
+    background: -webkit-linear-gradient(to top, #830044 10%, #ff0078 44%);
+    background: -moz-linear-gradient(to top, #830044 10%, #ff0078 44%);
+    background: linear-gradient(to top, #830044 10%, #ff0078 44%),
+      linear-gradient(black, white);
+    clip-path: polygon(
+      -50% 0px,
+      150% -50%,
+      150% 55%,
+      -50% 55%,
+      -50% 62%,
+      150% 62%,
+      150% 70%,
+      0 70%,
+      -50% 75%,
+      150% 75%,
+      150% 80%,
+      0 80%,
+      -50% 82%,
+      150% 82%,
+      150% 85%,
+      0 85%,
+      -50% 87%,
+      150% 87%,
+      150% 90%,
+      0 90%,
+      -50% 92%,
+      150% 92%,
+      150% 95%,
+      0 95%,
+      -50% 96%,
+      150% 96%,
+      150% 150%,
+      0 150%
+    );
+    box-shadow: #ff0078 0px 0 20px;
+  }
+  .about-text {
+    font-size: 1.5rem;
+  }
+  .button-wrapper {
+    text-align: left;
+    a {
+      padding: 8px 44px;
+    }
+  }
+}
+
+@media (min-width: map-get($viewport_size, l)) {
+  .about-text {
+    max-width: 75%;
+  }
+  .sun-wrapper {
+    position: relative;
+    .sun {
+      position: absolute;
+      left: 75%;
+      bottom: 0%;
+      margin: 0;
+      width: 200px;
+      height: 200px;
+    }
+  }
+}
+
+@media (min-width: 1550px) {
+  .sun-wrapper {
+    .sun {
+      width: 275px;
+      height: 275px;
+    }
+  }
+}
+
+@media (min-width: 1700px) {
+  .sun-wrapper {
+    .sun {
+      width: 300px;
+      height: 300px;
+    }
+  }
+}

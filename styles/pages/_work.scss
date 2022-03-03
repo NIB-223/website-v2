@@ -60,8 +60,7 @@ a {
   }
 }
 
-.work-wrapper {
-  min-height: 100vh;
+.pages-wrapper {
   margin: 15vh 16px 0;
   .title {
     background: #830044;
@@ -72,7 +71,7 @@ a {
     -webkit-text-fill-color: transparent;
     font-size: 3rem;
   }
-  .work-list-wrapper {
+  .pages-content-wrapper {
     max-width: 42rem;
     font-size: 1rem;
     margin-top: 25vh;
@@ -133,20 +132,31 @@ a {
   }
 }
 
-@media (min-width: map-get($viewport_size, m)) {
-  .work-wrapper {
-    margin: 20vh 5% 0;
-    .title {
-      font-size: 5rem;
-    }
-    .work-list-wrapper {
-      max-width: 50rem;
-      margin-top: 20vh;
+@media (min-width: 500px) {
+  .pages-wrapper {
+    .pages-content-wrapper {
       .work-list {
         li {
           img {
             max-width: 80%;
           }
+        }
+      }
+    }
+  }
+}
+
+@media (min-width: map-get($viewport_size, m)) {
+  .pages-wrapper {
+    margin: 20vh 5% 0;
+    .title {
+      font-size: 5rem;
+    }
+    .pages-content-wrapper {
+      max-width: 50rem;
+      margin-top: 20vh;
+      .work-list {
+        li {
           .project-text {
             h2 {
               font-size: 3rem;
@@ -171,8 +181,8 @@ a {
 }
 
 @media (min-width: map-get($viewport_size, l)) {
-  .work-wrapper {
-    .work-list-wrapper {
+  .pages-wrapper {
+    .pages-content-wrapper {
       max-width: 62rem;
       .work-list {
         li {
@@ -190,9 +200,9 @@ a {
 }
 
 @media (min-width: map-get($viewport_size, xl)) {
-  .work-wrapper {
+  .pages-wrapper {
     max-width: 90rem;
-    .work-list-wrapper {
+    .pages-content-wrapper {
       max-width: none;
       .work-list {
         li {
