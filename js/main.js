@@ -32,26 +32,33 @@ mainMenu.addEventListener('click', clickClose);
 function clickClose() {
     mainMenu.style.top = '-120%';
 };
-;
 
 
+//INTERSECTION OBSERVER
 
+//desktop nav
+const faders = document.querySelectorAll('.animation_nav--main');
+const appearOptions = {
+    threshold: .5
+}
 
+const appearOnScroll = new IntersectionObserver
+    (function (
+        entries,
+        appearOnScroll
+    ) {
+        entries.forEach(entry => {
+            if (!entry.isIntersecting) {
+                return;
+            } else {
+                entry.target.classList.add('appear-desktop_nav--main');
+                appearOnScroll.unobserve(entry.target);
+            }
+        })
+    },
+        appearOptions);
 
-
-
-
-
-
-// //main page transition
-// let mainTransition1 = document.querySelector('.main-transition-overlay1');
-// let mainTransition2 = document.querySelector('.main-transition-overlay2');
-// let transitionCloseTrigger = document.querySelector('.nav-items');
-
-// transitionCloseTrigger.addEventListener('click', closeTransition)
-
-// function closeTransition() {
-//     mainTransition1.classList.remove(".main-transition-overlay1");
-//     mainTransition1.classList.add(".main-transition-overlay1-js")
-// }
+faders.forEach(fader => {
+    appearOnScroll.observe(fader);
+});
 

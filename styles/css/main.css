@@ -26,6 +26,79 @@ body {
 
 /*Breakpoints*/
 /*Typography*/
+/*--HOMEPAGE CONTENT--*/
+/*NAME LOGO*/
+/*triangle*/
+.flipInY {
+  -webkit-backface-visibility: visible !important;
+  backface-visibility: visible !important;
+  -webkit-animation-name: flipInY;
+  animation-name: flipInY;
+  -webkit-animation-duration: 1s;
+  animation-duration: 1s;
+  -webkit-animation-fill-mode: both;
+  animation-fill-mode: both;
+  -webkit-animation-delay: 1.5s;
+  animation-delay: 4.25s;
+}
+
+@-webkit-keyframes flipInY {
+  0% {
+    -webkit-transform: perspective(400px) rotate3d(0, 1, 0, 90deg);
+    transform: perspective(400px) rotate3d(0, 1, 0, 90deg);
+    -webkit-transition-timing-function: ease-in;
+    transition-timing-function: ease-in;
+    opacity: 0;
+  }
+  40% {
+    -webkit-transform: perspective(400px) rotate3d(0, 1, 0, -20deg);
+    transform: perspective(400px) rotate3d(0, 1, 0, -20deg);
+    -webkit-transition-timing-function: ease-in;
+    transition-timing-function: ease-in;
+  }
+  60% {
+    -webkit-transform: perspective(400px) rotate3d(0, 1, 0, 10deg);
+    transform: perspective(400px) rotate3d(0, 1, 0, 10deg);
+    opacity: 1;
+  }
+  80% {
+    -webkit-transform: perspective(400px) rotate3d(0, 1, 0, -5deg);
+    transform: perspective(400px) rotate3d(0, 1, 0, -5deg);
+  }
+  100% {
+    -webkit-transform: perspective(400px);
+    transform: perspective(400px);
+  }
+}
+@keyframes flipInY {
+  0% {
+    -webkit-transform: perspective(400px) rotate3d(0, 1, 0, 90deg);
+    transform: perspective(400px) rotate3d(0, 1, 0, 90deg);
+    -webkit-transition-timing-function: ease-in;
+    transition-timing-function: ease-in;
+    opacity: 0;
+  }
+  40% {
+    -webkit-transform: perspective(400px) rotate3d(0, 1, 0, -20deg);
+    transform: perspective(400px) rotate3d(0, 1, 0, -20deg);
+    -webkit-transition-timing-function: ease-in;
+    transition-timing-function: ease-in;
+  }
+  60% {
+    -webkit-transform: perspective(400px) rotate3d(0, 1, 0, 10deg);
+    transform: perspective(400px) rotate3d(0, 1, 0, 10deg);
+    opacity: 1;
+  }
+  80% {
+    -webkit-transform: perspective(400px) rotate3d(0, 1, 0, -5deg);
+    transform: perspective(400px) rotate3d(0, 1, 0, -5deg);
+  }
+  100% {
+    -webkit-transform: perspective(400px);
+    transform: perspective(400px);
+  }
+}
+/*h1 (Robert Uebelhor)*/
 @font-face {
   font-family: kimberly;
   src: url(../../fonts/kimberley\ bl.ttf);
@@ -52,7 +125,7 @@ a {
   justify-content: space-between;
   align-items: center;
   gap: 36px;
-  padding-top: 80px;
+  padding-top: 65px;
 }
 .desktop-header .navbar .logo {
   display: flex;
@@ -273,29 +346,7 @@ body {
     display: none;
   }
 }
-.video-overlay {
-  background: linear-gradient(rgba(0, 0, 0, 0.65), rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3));
-  position: fixed;
-  top: 0;
-  left: 0;
-  z-index: -100;
-  width: 100%;
-  height: 100%;
-}
-
-#myVideo {
-  object-fit: cover;
-  position: fixed;
-  left: 0;
-  right: 0;
-  bottom: 0;
-  top: 0;
-  z-index: -200;
-  width: 100vw;
-  height: 100vh;
-}
-
-/*default animations*/
+/*MAIN SCREEN TRANSITION*/
 .main-transition-overlay1 {
   position: fixed;
   background-color: black;
@@ -314,6 +365,14 @@ body {
   box-shadow: 0 0px 1.5px #99ffff, 0 0px 2.5px #99ffff, 0 0px 5.5px #99ffff, 0 0px 10px #0cbfe9, 0 0px 20px #0cbfe9, 0 0px 22px #0cbfe9, 0 0px 25px #0cbfe9, 0 0px 36px #0cbfe9;
 }
 
+@keyframes page-transition-top {
+  from {
+    transform: translateY(0);
+  }
+  to {
+    transform: translateY(-46vh);
+  }
+}
 .main-transition-overlay2 {
   position: fixed;
   background-color: black;
@@ -332,14 +391,6 @@ body {
   box-shadow: 0 0 1.5px #99ffff, 0 0 2.5px #99ffff, 0 0 5.5px #99ffff, 0 0 10px #0cbfe9, 0 0 20px #0cbfe9, 0 0 22px #0cbfe9, 0 0 25px #0cbfe9, 0 0 36px #0cbfe9;
 }
 
-@keyframes page-transition-top {
-  from {
-    transform: translateY(0);
-  }
-  to {
-    transform: translateY(-46vh);
-  }
-}
 @keyframes page-transition-bottom {
   from {
     transform: translateY(0);
@@ -391,22 +442,45 @@ body {
     opacity: 0;
   }
 }
-.wrapper .grid-item .content-wrapper {
+/*BACKGROUND VIDEO*/
+.video-overlay {
+  background: linear-gradient(rgba(0, 0, 0, 0.65), rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3));
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: -100;
+  width: 100%;
+  height: 100%;
+}
+
+#myVideo {
+  object-fit: cover;
+  position: fixed;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  top: 0;
+  z-index: -200;
+  width: 100vw;
+  height: 100vh;
+}
+
+/*NAME LOGO*/
+.wrapper .content-wrapper {
   z-index: 0;
   position: relative;
   display: grid;
   justify-items: center;
   margin-top: 20vh;
 }
-.wrapper .grid-item .content-wrapper img {
+.wrapper .content-wrapper img {
   width: 350px;
   max-width: 100%;
   padding: 0 32px;
-  transform: rotate(180deg);
   filter: brightness(85%);
   position: relative;
 }
-.wrapper .grid-item .content-wrapper h1 {
+.wrapper .content-wrapper h1 {
   background: linear-gradient(to bottom, #ebf1f6 0%, #abd3ee 50%, #859ee2 51%, #d5ebfb 100%);
   -webkit-background-clip: text;
   background-clip: text;
@@ -417,17 +491,18 @@ body {
   transition: font-size 1s;
   position: absolute;
   top: 10%;
-  /*text-shadowing*/
+  z-index: 10;
+  /*"ROBERT"-text-shadow*/
 }
-.wrapper .grid-item .content-wrapper h1::after {
+.wrapper .content-wrapper h1::after {
   background: none;
   content: attr(data-text);
   left: 0;
   position: absolute;
   text-shadow: 1px -1px 0 rgba(255, 255, 255, 0.5), 3px 1px 3px rgba(255, 0, 255, 0.85), -3px -2px 3px rgba(0, 0, 255, 0.85), 1px -2px 0 rgba(255, 255, 255, 0.8);
-  z-index: -3;
+  z-index: 100;
 }
-.wrapper .grid-item .content-wrapper h2 {
+.wrapper .content-wrapper h2 {
   text-align: center;
   color: #fdc0fd;
   text-shadow: 0 0 7px #ff79d7, 0 0 10px #ff79d7, 0 0 21px #ff79d7, 0 0 42px #ff00aa, 0 0 82px #ff00aa, 0 0 92px #ff00aa, 0 0 102px #ff00aa, 0 0 151px #ff00aa;
@@ -437,6 +512,7 @@ body {
   position: absolute;
   top: 40%;
   font-family: "Yellowtail", cursive;
+  opacity: 0;
 }
 @keyframes flicker {
   0%, 10%, 22%, 25%, 53%, 57%, 100% {
@@ -453,10 +529,10 @@ body {
   }
 }
 @media (max-width: 340px) {
-  .wrapper .grid-item .content-wrapper h1 {
+  .wrapper .content-wrapper h1 {
     font-size: 1.65rem;
   }
-  .wrapper .grid-item .content-wrapper h2 {
+  .wrapper .content-wrapper h2 {
     font-size: 1.4rem;
     top: 40%;
   }
@@ -466,19 +542,19 @@ body {
     width: 250px;
   }
 
-  .wrapper .grid-item .content-wrapper img {
+  .wrapper .content-wrapper img {
     width: 500px;
   }
-  .wrapper .grid-item .content-wrapper h1 {
+  .wrapper .content-wrapper h1 {
     font-size: 3.5rem;
     top: 10%;
   }
-  .wrapper .grid-item .content-wrapper h2 {
+  .wrapper .content-wrapper h2 {
     font-size: 3.5rem;
   }
 }
 @media (max-device-width: 1024px) and (orientation: landscape) {
-  .wrapper .grid-item .content-wrapper {
+  .wrapper .content-wrapper {
     padding-bottom: 64px;
   }
 }
