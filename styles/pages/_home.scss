@@ -141,14 +141,20 @@
     display: grid;
     justify-items: center;
     margin-top: 20vh;
+
     img {
       width: 350px;
       max-width: 100%;
       padding: 0 32px;
-      // transform: rotate(180deg);
       filter: brightness(85%);
       position: relative;
     }
+
+    .h1-wrapper {
+      position: absolute;
+      top: 20%;
+    }
+
     h1 {
       background: linear-gradient(
         to bottom,
@@ -164,10 +170,10 @@
       text-transform: uppercase;
       font-size: 2.25rem;
       transition: font-size 1s;
-      position: absolute;
-      top: 10%;
-      z-index: 10;
-      /*"ROBERT"-text-shadow*/
+      display: inline;
+      opacity: 0;
+      margin-top: 32px;
+
       &::after {
         background: none;
         content: attr(data-text);
@@ -177,17 +183,18 @@
           3px 1px 3px rgba(255, 0, 255, 0.85),
           -3px -2px 3px rgba(0, 0, 255, 0.85),
           1px -2px 0 rgba(255, 255, 255, 0.8);
-        z-index: 100;
+        z-index: -10;
+        opacity: 0;
       }
     }
-
     h2 {
+      letter-spacing: 3px;
       text-align: center;
-      color: #fdc0fd;
-      text-shadow: 0 0 7px #ff79d7, 0 0 10px #ff79d7, 0 0 21px #ff79d7,
-        0 0 42px #ff00aa, 0 0 82px #ff00aa, 0 0 92px #ff00aa, 0 0 102px #ff00aa,
-        0 0 151px #ff00aa;
-      animation: flicker 1.5s infinite alternate;
+      color: #fff;
+      -webkit-text-stroke: 0.01px rgba(180, 180, 180, 0.438);
+      text-shadow: 0 0 26px rgba(68, 68, 68, 0.438);
+      animation: flicker 1.5s 6.45s infinite alternate,
+        web-dev-ani 250ms 5.75s forwards;
       transform: rotate(-8deg);
       font-size: 2rem;
       position: absolute;
@@ -203,6 +210,8 @@
       53%,
       57%,
       100% {
+        -webkit-text-stroke: 0px;
+        color: #eec5ee;
         text-shadow: 0 0 4px #f7adf7, 0 0 11px #f7adf7, 0 0 19px #f7adf7,
           0 0 40px #ff00aa, 0 0 80px #ff00aa, 0 0 90px #ff00aa,
           0 0 100px #ff00aa, 0 0 150px #ff00aa;
@@ -211,6 +220,14 @@
       24%,
       55% {
         text-shadow: none;
+      }
+    }
+    @keyframes web-dev-ani {
+      0% {
+        opacity: 0;
+      }
+      100% {
+        opacity: 1;
       }
     }
   }
@@ -230,6 +247,20 @@
       }
       h2 {
         font-size: 1.4rem;
+        top: 40%;
+      }
+    }
+  }
+}
+
+@media (max-width: 280px) {
+  .wrapper {
+    .content-wrapper {
+      h1 {
+        font-size: 1.45rem !important;
+      }
+      h2 {
+        font-size: 1.25rem !important;
         top: 40%;
       }
     }

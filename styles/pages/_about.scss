@@ -147,18 +147,9 @@
   }
 }
 
-@media (max-width: map-get($viewport_size, m)) {
-  .graph-wrapper {
-    height: 35vh;
-  }
-}
-
 @media (min-width: map-get($viewport_size, m)) {
   .sun-wrapper {
     .sun {
-      //   display: flex;
-      //   margin-left: auto;
-      //   margin-right: 56px;
       width: 150px;
       height: 150px;
       border-radius: 100%;

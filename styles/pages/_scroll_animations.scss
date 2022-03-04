@@ -71,18 +71,19 @@
   }
 }
 /*h1 (Robert Uebelhor)*/
-// .name-ani,
-// .name-ani::after {
-//   animation-name: name-ani;
-//   animation-duration: 250ms;
-//   animation-delay: 5s;
-//   animation-fill-mode: forwards;
-// }
-// @keyframes name-ani {
-//   0% {
-//     filter: opacity(0);
-//   }
-//   100% {
-//     filter: opacity(1);
-//   }
-// }
+.name-ani,
+.name-ani::after {
+  animation-name: name-ani;
+  animation-duration: 250ms;
+  animation-delay: 5s;
+  animation-fill-mode: forwards;
+}
+@keyframes name-ani {
+  0% {
+    opacity: 0;
+  }
+
+  100% {
+    opacity: 1;
+  }
+}

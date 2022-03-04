@@ -99,6 +99,22 @@ body {
   }
 }
 /*h1 (Robert Uebelhor)*/
+.name-ani,
+.name-ani::after {
+  animation-name: name-ani;
+  animation-duration: 250ms;
+  animation-delay: 5s;
+  animation-fill-mode: forwards;
+}
+
+@keyframes name-ani {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
 @font-face {
   font-family: kimberly;
   src: url(../../fonts/kimberley\ bl.ttf);
@@ -480,6 +496,10 @@ body {
   filter: brightness(85%);
   position: relative;
 }
+.wrapper .content-wrapper .h1-wrapper {
+  position: absolute;
+  top: 20%;
+}
 .wrapper .content-wrapper h1 {
   background: linear-gradient(to bottom, #ebf1f6 0%, #abd3ee 50%, #859ee2 51%, #d5ebfb 100%);
   -webkit-background-clip: text;
@@ -489,10 +509,9 @@ body {
   text-transform: uppercase;
   font-size: 2.25rem;
   transition: font-size 1s;
-  position: absolute;
-  top: 10%;
-  z-index: 10;
-  /*"ROBERT"-text-shadow*/
+  display: inline;
+  opacity: 0;
+  margin-top: 32px;
 }
 .wrapper .content-wrapper h1::after {
   background: none;
@@ -500,13 +519,16 @@ body {
   left: 0;
   position: absolute;
   text-shadow: 1px -1px 0 rgba(255, 255, 255, 0.5), 3px 1px 3px rgba(255, 0, 255, 0.85), -3px -2px 3px rgba(0, 0, 255, 0.85), 1px -2px 0 rgba(255, 255, 255, 0.8);
-  z-index: 100;
+  z-index: -10;
+  opacity: 0;
 }
 .wrapper .content-wrapper h2 {
+  letter-spacing: 3px;
   text-align: center;
-  color: #fdc0fd;
-  text-shadow: 0 0 7px #ff79d7, 0 0 10px #ff79d7, 0 0 21px #ff79d7, 0 0 42px #ff00aa, 0 0 82px #ff00aa, 0 0 92px #ff00aa, 0 0 102px #ff00aa, 0 0 151px #ff00aa;
-  animation: flicker 1.5s infinite alternate;
+  color: #fff;
+  -webkit-text-stroke: 0.01px rgba(180, 180, 180, 0.438);
+  text-shadow: 0 0 26px rgba(68, 68, 68, 0.438);
+  animation: flicker 1.5s 6.45s infinite alternate, web-dev-ani 250ms 5.75s forwards;
   transform: rotate(-8deg);
   font-size: 2rem;
   position: absolute;
@@ -516,10 +538,20 @@ body {
 }
 @keyframes flicker {
   0%, 10%, 22%, 25%, 53%, 57%, 100% {
+    -webkit-text-stroke: 0px;
+    color: #eec5ee;
     text-shadow: 0 0 4px #f7adf7, 0 0 11px #f7adf7, 0 0 19px #f7adf7, 0 0 40px #ff00aa, 0 0 80px #ff00aa, 0 0 90px #ff00aa, 0 0 100px #ff00aa, 0 0 150px #ff00aa;
   }
   20%, 24%, 55% {
     text-shadow: none;
+  }
+}
+@keyframes web-dev-ani {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
   }
 }
 
@@ -534,6 +566,15 @@ body {
   }
   .wrapper .content-wrapper h2 {
     font-size: 1.4rem;
+    top: 40%;
+  }
+}
+@media (max-width: 280px) {
+  .wrapper .content-wrapper h1 {
+    font-size: 1.45rem !important;
+  }
+  .wrapper .content-wrapper h2 {
+    font-size: 1.25rem !important;
     top: 40%;
   }
 }
@@ -659,11 +700,6 @@ body {
 
   .button-wrapper {
     margin-bottom: 30px;
-  }
-}
-@media (max-width: 768px) {
-  .graph-wrapper {
-    height: 35vh;
   }
 }
 @media (min-width: 768px) {
