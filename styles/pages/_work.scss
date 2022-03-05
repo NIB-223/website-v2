@@ -70,6 +70,7 @@ a {
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
     font-size: 3rem;
+    opacity: 0;
   }
   .pages-content-wrapper {
     max-width: 42rem;
@@ -83,7 +84,7 @@ a {
       flex-wrap: wrap;
       li {
         margin: 0px 0px 175px;
-
+        opacity: 0;
         img {
           max-width: 100%;
           margin: 0px auto 1rem 0px;

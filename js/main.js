@@ -9,7 +9,7 @@ openMenu.addEventListener('click', show)
 closeMenu.addEventListener('click', close)
 
 function show() {
-    mainMenu.style.display = 'grid';
+    mainMenu.style.display = 'flex';
     mainMenu.style.top = '0';
 }
 function close() {
@@ -24,8 +24,6 @@ document.addEventListener('keydown', function (event) {
     }
 });
 
-
-
 //clicking anywhere closes mobile menu
 mainMenu.addEventListener('click', clickClose);
 
@@ -36,10 +34,11 @@ function clickClose() {
 
 //INTERSECTION OBSERVER
 
-//desktop nav
-const faders = document.querySelectorAll('.animation_nav--main');
+const faders = document.querySelectorAll('.sun-ani, .graph-ani');
+
+
 const appearOptions = {
-    threshold: .5
+    threshold: .325
 }
 
 const appearOnScroll = new IntersectionObserver
@@ -51,7 +50,7 @@ const appearOnScroll = new IntersectionObserver
             if (!entry.isIntersecting) {
                 return;
             } else {
-                entry.target.classList.add('appear-desktop_nav--main');
+                entry.target.classList.add('appear');
                 appearOnScroll.unobserve(entry.target);
             }
         })
@@ -60,5 +59,31 @@ const appearOnScroll = new IntersectionObserver
 
 faders.forEach(fader => {
     appearOnScroll.observe(fader);
+});
+
+const workFaders = document.querySelectorAll('.slide-right');
+
+const appearOptions2 = {
+    threshold: .4
+}
+
+const appearOnScroll2 = new IntersectionObserver
+    (function (
+        entries2,
+        appearOnScroll2
+    ) {
+        entries2.forEach(entry2 => {
+            if (!entry2.isIntersecting) {
+                return;
+            } else {
+                entry2.target.classList.add('appear-work');
+                appearOnScroll2.unobserve(entry2.target);
+            }
+        })
+    },
+        appearOptions2);
+
+workFaders.forEach(workFader => {
+    appearOnScroll2.observe(workFader);
 });
 

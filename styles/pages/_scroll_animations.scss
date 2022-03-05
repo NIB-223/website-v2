@@ -87,3 +87,134 @@
     opacity: 1;
   }
 }
+
+/*title animations*/
+.title-ani {
+  animation-name: title-ani;
+  animation-delay: 1s;
+  animation-duration: 400ms;
+  animation-timing-function: ease-out;
+  animation-fill-mode: forwards;
+}
+@keyframes title-ani {
+  0% {
+    opacity: 0;
+    transform: translateY(-20px);
+  }
+  100% {
+    opacity: 1;
+    transform: translate(0);
+  }
+}
+/*about me text*/
+.about-me-text-ani {
+  animation-name: about-me-text-ani;
+  animation-delay: 2s;
+  animation-duration: 400ms;
+  animation-timing-function: ease-out;
+  animation-fill-mode: forwards;
+}
+@keyframes about-me-text-ani {
+  0% {
+    opacity: 0;
+    transform: translateY(-20px);
+  }
+  100% {
+    opacity: 1;
+    transform: translate(0);
+  }
+}
+
+/*(Intersection Observer)*/
+
+/*sun and graph*/
+.sun-ani,
+.graph-ani {
+  opacity: 0;
+  transition: opacity 0.75s ease-out;
+  transition: transform 0.75s ease-out;
+}
+
+@keyframes sun-n-graph {
+  0% {
+    opacity: 0;
+  }
+  50% {
+    opacity: 0.5;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+.appear {
+  animation: sun-n-graph 1s;
+}
+
+.sun-ani,
+.graph-ani {
+  &.appear {
+    opacity: 1;
+    transform: translate(0);
+  }
+}
+.sun-ani {
+  transform: translateY(50px);
+}
+.graph-ani {
+  transform: translateY(50px);
+}
+
+/*work page projects*/
+
+.work-1st-ani {
+  animation-name: work-1st-ani;
+  animation-duration: 1s;
+  animation-timing-function: ease-out;
+  animation-fill-mode: forwards;
+  animation-delay: 1.75s;
+}
+
+@keyframes work-1st-ani {
+  0% {
+    opacity: 0;
+    transform: translateX(-20%);
+  }
+  100% {
+    opacity: 1;
+    transform: translateX(0%);
+  }
+}
+
+.slide-right {
+  opacity: 0;
+  transition: opacity 1s ease-out;
+  transition: transform 1s ease-out;
+}
+
+.appear-work {
+  animation: fade-in 1s forwards;
+}
+
+@keyframes fade-in {
+  0% {
+    opacity: 0;
+  }
+  50% {
+    opacity: 0.5;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+.slide-right {
+  &.appear-work {
+    opacity: 1;
+    transform: translate(0);
+  }
+}
+
+.slide-right {
+  transform: translateX(-20%);
+}

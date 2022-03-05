@@ -50,10 +50,26 @@
     transform: translateY(-46vh);
   }
 }
-
-.pages-content-wrapper {
-  position: relative;
-  z-index: 1;
+.pages-wrapper {
+  margin: 15vh 16px 0;
+  .about-title {
+    background: #830044;
+    background: -webkit-linear-gradient(to top, #830044 10%, #ff0078 44%);
+    background: -moz-linear-gradient(to top, #830044 10%, #ff0078 44%);
+    background: linear-gradient(to top, #830044 10%, #ff0078 44%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    font-size: 3rem;
+    opacity: 0;
+  }
+  .pages-wrapper--about {
+    position: relative;
+    z-index: 1;
+    opacity: 0;
+    max-width: 42rem;
+    font-size: 1rem;
+    margin-top: 25vh;
+  }
 }
 
 .button-wrapper {
@@ -70,7 +86,7 @@
 
 .graph-wrapper {
   overflow: hidden;
-  height: 50vh;
+  height: 100%;
   .graph {
     background: linear-gradient(
         180deg,
@@ -88,7 +104,6 @@
       );
     background-size: 4em 2em, 4em 2em;
     height: 30em;
-    perspective: 1000px;
     transform: perspective(200px) rotateX(45deg) scale(2);
   }
 }
@@ -148,6 +163,13 @@
 }
 
 @media (min-width: map-get($viewport_size, m)) {
+  .pages-wrapper {
+    .pages-wrapper--about {
+      max-width: 50rem;
+      margin-top: 20vh;
+    }
+  }
+
   .sun-wrapper {
     .sun {
       width: 150px;
@@ -205,9 +227,15 @@
 }
 
 @media (min-width: map-get($viewport_size, l)) {
-  .about-text {
-    max-width: 75%;
+  .pages-wrapper {
+    .about-text {
+      max-width: 75%;
+    }
+    .pages-wrapper--about {
+      max-width: 62rem;
+    }
   }
+
   .sun-wrapper {
     position: relative;
     .sun {
@@ -217,6 +245,14 @@
       margin: 0;
       width: 200px;
       height: 200px;
+    }
+  }
+}
+
+@media (min-width: map-get($viewport_size, xl)) {
+  .pages-wrapper {
+    .pages-wrapper--about {
+      max-width: none;
     }
   }
 }

@@ -29,13 +29,14 @@ body {
     -webkit-text-fill-color: transparent;
   }
   .mainMenu {
-    justify-items: center;
-    grid-template-columns: 1fr;
-    place-items: center;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
     margin-top: 0;
     height: 100vh;
     position: fixed;
-    top: 0;
+    top: -120%;
     right: 0;
     left: 0;
     z-index: 10;
@@ -46,8 +47,6 @@ body {
     padding-inline-start: 0;
     overflow-y: auto;
     .nav-items {
-      align-self: end;
-
       li {
         a {
           display: inline-block;
@@ -126,18 +125,6 @@ body {
     .icons {
       text-align: center;
       margin-top: 56px;
-    }
-  }
-}
-
-@media (min-width: 375px) {
-  .navbar-mobile {
-    .mainMenu {
-      .nav-items {
-        li a {
-          font-size: 3.25rem;
-        }
-      }
     }
   }
 }
