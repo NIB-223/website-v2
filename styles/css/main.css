@@ -30,80 +30,40 @@ body {
 /*NAME LOGO*/
 /*triangle*/
 .flipInY {
-  -webkit-backface-visibility: visible !important;
   backface-visibility: visible !important;
-  -webkit-animation-name: flipInY;
   animation-name: flipInY;
-  -webkit-animation-duration: 1s;
-  animation-duration: 1s;
-  -webkit-animation-fill-mode: both;
+  animation-duration: 2s;
   animation-fill-mode: both;
-  -webkit-animation-delay: 1.5s;
   animation-delay: 4.25s;
 }
 
-@-webkit-keyframes flipInY {
-  0% {
-    -webkit-transform: perspective(400px) rotate3d(0, 1, 0, 90deg);
-    transform: perspective(400px) rotate3d(0, 1, 0, 90deg);
-    -webkit-transition-timing-function: ease-in;
-    transition-timing-function: ease-in;
-    opacity: 0;
-  }
-  40% {
-    -webkit-transform: perspective(400px) rotate3d(0, 1, 0, -20deg);
-    transform: perspective(400px) rotate3d(0, 1, 0, -20deg);
-    -webkit-transition-timing-function: ease-in;
-    transition-timing-function: ease-in;
-  }
-  60% {
-    -webkit-transform: perspective(400px) rotate3d(0, 1, 0, 10deg);
-    transform: perspective(400px) rotate3d(0, 1, 0, 10deg);
-    opacity: 1;
-  }
-  80% {
-    -webkit-transform: perspective(400px) rotate3d(0, 1, 0, -5deg);
-    transform: perspective(400px) rotate3d(0, 1, 0, -5deg);
-  }
-  100% {
-    -webkit-transform: perspective(400px);
-    transform: perspective(400px);
-  }
-}
 @keyframes flipInY {
   0% {
-    -webkit-transform: perspective(400px) rotate3d(0, 1, 0, 90deg);
-    transform: perspective(400px) rotate3d(0, 1, 0, 90deg);
-    -webkit-transition-timing-function: ease-in;
+    transform: rotate3d(0, 1, 0, 360deg);
     transition-timing-function: ease-in;
     opacity: 0;
   }
   40% {
-    -webkit-transform: perspective(400px) rotate3d(0, 1, 0, -20deg);
-    transform: perspective(400px) rotate3d(0, 1, 0, -20deg);
-    -webkit-transition-timing-function: ease-in;
+    transform: rotate3d(0, 1, 0, -20deg);
     transition-timing-function: ease-in;
   }
   60% {
-    -webkit-transform: perspective(400px) rotate3d(0, 1, 0, 10deg);
-    transform: perspective(400px) rotate3d(0, 1, 0, 10deg);
+    transform: rotate3d(0, 1, 0, 10deg);
     opacity: 1;
   }
   80% {
-    -webkit-transform: perspective(400px) rotate3d(0, 1, 0, -5deg);
-    transform: perspective(400px) rotate3d(0, 1, 0, -5deg);
+    transform: rotate3d(0, 1, 0, -5deg);
   }
   100% {
-    -webkit-transform: perspective(400px);
-    transform: perspective(400px);
+    transform: perspective(2000px);
   }
 }
 /*h1 (Robert Uebelhor)*/
 .name-ani,
 .name-ani::after {
   animation-name: name-ani;
-  animation-duration: 250ms;
-  animation-delay: 5s;
+  animation-duration: 500ms;
+  animation-delay: 6s;
   animation-fill-mode: forwards;
 }
 
@@ -646,7 +606,7 @@ body {
   color: #fff;
   -webkit-text-stroke: 0.01px rgba(180, 180, 180, 0.438);
   text-shadow: 0 0 26px rgba(68, 68, 68, 0.438);
-  animation: flicker 1.5s 6.45s infinite alternate, web-dev-ani 250ms 5.75s forwards;
+  animation: flicker 1.5s 6.45s infinite alternate, web-dev-ani 250ms 6.5s forwards;
   transform: rotate(-8deg);
   font-size: 2rem;
   position: absolute;
