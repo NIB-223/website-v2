@@ -5,6 +5,8 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
+    <meta name="description"
+        content="The home page to my 1980s retro-themed portfolio site, based on designs commonly seen with the synthwave music microgenre.">
     <meta name="keywords"
         content="personal website, portfolio, skills, services, web development, software engineer, software developer, design">
     <title>Robert Uebelhor</title>
@@ -13,8 +15,6 @@
     <link rel="stylesheet" type="text/css" href="styles/css/main.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Jura&family=Neonderthaw&family=Questrial&display=swap"
-        rel="stylesheet">
     <script src="https://kit.fontawesome.com/3116d9e728.js" crossorigin="anonymous"></script>
 </head>
 
@@ -26,7 +26,11 @@
     <div>
         <div class="main-transition-overlay1"></div>
         <div class="main-transition-overlay2"></div>
-        <img class="logo-preloader" src="./img/logo.png">
+        <picture>
+            <source srcset="./img/logo.webp" type="image/webp">
+            <source srcset="./img/logo.png" type="image/png">
+            <img class="logo-preloader" src="./img/logo.png" alt="logo-spin" loading="lazy">
+        </picture>
 
     </div>
 
@@ -56,9 +60,10 @@
             <!--navbar menu-->
             <ul class="mainMenu">
                 <div class="nav-items">
-                    <li><a class="underlined about-hover" href="about.html">About</a></li>
-                    <li><a class="underlined work-hover" href="work.html">Work</a></li>
-                    <li><a class="underlined contact-hover" href="mailto: robertu.dev@gmail.com">Contact</a></li>
+                    <li><a class="underlined about-hover" href="about.html" title="About Me">About</a></li>
+                    <li><a class="underlined work-hover" href="work.html" title="My Work">Work</a></li>
+                    <li><a class="underlined contact-hover" href="mailto: robertu.dev@gmail.com"
+                            title="Contact Me">Contact</a></li>
                     <!--social-->
                     <div class="icons">
                         <a target="_blank" title="Github" href="https://github.com/Drxl95"><i
@@ -85,14 +90,14 @@
                 <!--navbar menu-->
                 <div class="navbar-menu">
                     <div class="nav-items">
-                        <a class="underlined about-hover" href="about.html" title="About">&nbsp;About&nbsp;</a>
+                        <a class="underlined about-hover" href="about.html" title="About Me">&nbsp;About&nbsp;</a>
                     </div>
                     <div class="nav-items">
-                        <a class="underlined work-hover" href="work.html" title="Work">&nbsp;Work&nbsp;</a>
+                        <a class="underlined work-hover" href="work.html" title="My Work">&nbsp;Work&nbsp;</a>
                     </div>
                     <div class="nav-items">
                         <a class="underlined contact-hover" href="mailto: robertu.dev@gmail.com"
-                            title="Contact">&nbsp;Contact&nbsp;</a>
+                            title="Contact Me">&nbsp;Contact&nbsp;</a>
                     </div>
                     <!--social-->
                     <div class="social-container">
@@ -112,7 +117,11 @@
     <!--NAME LOGO-->
     <section class="wrapper">
         <div class="content-wrapper">
-            <img class="flipInY" src="./img/neon-blue - flip.png" alt="logo-triangle">
+            <picture>
+                <source srcset="./img/neon-blue-flip.webp" type="image/webp">
+                <source srcset="./img/neon-blue-flip.png" type="image/png">
+                <img class="flipInY triangle-flip" src="./img/neon-blue-flip.png" alt="triangle-flip" loading="lazy">
+            </picture>
             <div class="h1-wrapper">
                 <h1 class="name-ani" data-text="Robert Uebelhor">Robert Uebelhor</h1>
             </div>
@@ -121,7 +130,6 @@
     </section>
 
     <script src="./js/main.js"></script>
-
 </body>
 
 </html>

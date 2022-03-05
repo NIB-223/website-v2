@@ -1,4 +1,5 @@
 @import url("https://fonts.googleapis.com/css2?family=Yellowtail&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Neonderthaw&display=swap");
 * {
   box-sizing: border-box;
 }
@@ -568,7 +569,7 @@ body {
   justify-items: center;
   margin-top: 20vh;
 }
-.wrapper .content-wrapper img {
+.wrapper .content-wrapper picture .triangle-flip {
   width: 350px;
   max-width: 100%;
   padding: 0 32px;
@@ -662,7 +663,7 @@ body {
     width: 250px;
   }
 
-  .wrapper .content-wrapper img {
+  .wrapper .content-wrapper picture .triangle-flip {
     width: 500px;
   }
   .wrapper .content-wrapper h1 {

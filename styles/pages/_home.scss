@@ -142,12 +142,14 @@
     justify-items: center;
     margin-top: 20vh;
 
-    img {
-      width: 350px;
-      max-width: 100%;
-      padding: 0 32px;
-      filter: brightness(85%);
-      position: relative;
+    picture {
+      .triangle-flip {
+        width: 350px;
+        max-width: 100%;
+        padding: 0 32px;
+        filter: brightness(85%);
+        position: relative;
+      }
     }
 
     .h1-wrapper {
@@ -273,9 +275,12 @@
   }
   .wrapper {
     .content-wrapper {
-      img {
-        width: 500px;
+      picture {
+        .triangle-flip {
+          width: 500px;
+        }
       }
+
       h1 {
         font-size: 3.5rem;
         top: 10%;
