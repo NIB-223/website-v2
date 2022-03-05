@@ -246,6 +246,7 @@ a {
 .desktop-header .navbar-menu .nav-items a.about-hover,
 .desktop-header .navbar-menu .nav-items a.work-hover,
 .desktop-header .navbar-menu .nav-items a.contact-hover {
+  line-height: 50px;
   font-family: Brat;
   font-size: 2.75rem;
   background: #830044;
