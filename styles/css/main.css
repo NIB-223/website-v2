@@ -801,6 +801,7 @@ body {
   background: linear-gradient(to top, #830044 10%, #ff0078 44%);
 }
 
+/*graph*/
 .graph-wrapper {
   overflow: hidden;
   height: 100%;
@@ -828,8 +829,7 @@ body {
     background: -webkit-linear-gradient(to top, #830044 10%, #ff0078 44%);
     background: -moz-linear-gradient(to top, #830044 10%, #ff0078 44%);
     background: linear-gradient(to top, #830044 10%, #ff0078 44%), linear-gradient(black, white);
-    clip-path: polygon(-50% 0px, 150% -50%, 150% 55%, -50% 55%, -50% 62%, 150% 62%, 150% 70%, 0 70%, -50% 75%, 150% 75%, 150% 80%, 0 80%, -50% 82%, 150% 82%, 150% 85%, 0 85%, -50% 87%, 150% 87%, 150% 90%, 0 90%, -50% 92%, 150% 92%, 150% 95%, 0 95%, -50% 96%, 150% 96%, 150% 150%, 0 150%);
-    box-shadow: #ff0078 0px 0 20px;
+    box-shadow: #ff0078 0px 0 10px;
   }
 
   .button-wrapper {
@@ -845,13 +845,6 @@ body {
   .sun-wrapper .sun {
     width: 150px;
     height: 150px;
-    border-radius: 100%;
-    background: #830044;
-    background: -webkit-linear-gradient(to top, #830044 10%, #ff0078 44%);
-    background: -moz-linear-gradient(to top, #830044 10%, #ff0078 44%);
-    background: linear-gradient(to top, #830044 10%, #ff0078 44%), linear-gradient(black, white);
-    clip-path: polygon(-50% 0px, 150% -50%, 150% 55%, -50% 55%, -50% 62%, 150% 62%, 150% 70%, 0 70%, -50% 75%, 150% 75%, 150% 80%, 0 80%, -50% 82%, 150% 82%, 150% 85%, 0 85%, -50% 87%, 150% 87%, 150% 90%, 0 90%, -50% 92%, 150% 92%, 150% 95%, 0 95%, -50% 96%, 150% 96%, 150% 150%, 0 150%);
-    box-shadow: #ff0078 0px 0 20px;
   }
 
   .about-text {
