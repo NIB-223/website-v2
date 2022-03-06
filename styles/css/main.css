@@ -204,14 +204,17 @@ body {
 @font-face {
   font-family: kimberly;
   src: url(../../fonts/kimberley\ bl.ttf);
+  font-display: swap;
 }
 @font-face {
   font-family: Brat;
   src: url("../../fonts/Brat.ttf");
+  font-display: swap;
 }
 @font-face {
   font-family: Lazer;
   src: url("../../fonts/Lazer84.ttf");
+  font-display: swap;
 }
 a {
   font-family: "Jura", sans-serif;

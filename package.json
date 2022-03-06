@@ -15,8 +15,5 @@
   "bugs": {
     "url": "https://github.com/Drxl95/website-v2/issues"
   },
-  "homepage": "https://github.com/Drxl95/website-v2#readme",
-  "dependencies": {
-    "swup": "^2.0.14"
-  }
+  "homepage": "https://github.com/Drxl95/website-v2#readme"
 }
