@@ -1,3 +1,10 @@
+/*
+* Prefixed by https://autoprefixer.github.io
+* PostCSS: v8.3.6,
+* Autoprefixer: v10.3.1
+* Browsers: last 4 version
+*/
+
 body {
   background-color: rgba(0, 0, 0, 0.975);
   color: #fff;
@@ -15,12 +22,19 @@ a {
   top: 0;
   left: 0;
   width: 100%;
+  -webkit-animation-name: page-transition-top;
   animation-name: page-transition-top;
+  -webkit-animation-duration: 750ms;
   animation-duration: 750ms;
+  -webkit-animation-timing-function: ease-in;
   animation-timing-function: ease-in;
+  -webkit-animation-fill-mode: forwards;
   animation-fill-mode: forwards;
   border-bottom: 4px solid #fff;
   color: #fff;
+  -webkit-box-shadow: 0 0px 1.5px #99ffff, 0 0px 2.5px #99ffff,
+    0 0px 5.5px #99ffff, 0 0px 10px #0cbfe9, 0 0px 20px #0cbfe9,
+    0 0px 22px #0cbfe9, 0 0px 25px #0cbfe9, 0 0px 36px #0cbfe9;
   box-shadow: 0 0px 1.5px #99ffff, 0 0px 2.5px #99ffff, 0 0px 5.5px #99ffff,
     0 0px 10px #0cbfe9, 0 0px 20px #0cbfe9, 0 0px 22px #0cbfe9,
     0 0px 25px #0cbfe9, 0 0px 36px #0cbfe9;
@@ -33,29 +47,60 @@ a {
   top: 50vh;
   left: 0;
   width: 100%;
+  -webkit-animation-name: page-transition-bottom;
   animation-name: page-transition-bottom;
+  -webkit-animation-duration: 750ms;
   animation-duration: 750ms;
+  -webkit-animation-timing-function: ease-in;
   animation-timing-function: ease-in;
+  -webkit-animation-fill-mode: forwards;
   animation-fill-mode: forwards;
   border-top: 4px solid #fff;
   color: #fff;
+  -webkit-box-shadow: 0 0 1.5px #99ffff, 0 0 2.5px #99ffff, 0 0 5.5px #99ffff,
+    0 0 10px #0cbfe9, 0 0 20px #0cbfe9, 0 0 22px #0cbfe9, 0 0 25px #0cbfe9,
+    0 0 36px #0cbfe9;
   box-shadow: 0 0 1.5px #99ffff, 0 0 2.5px #99ffff, 0 0 5.5px #99ffff,
     0 0 10px #0cbfe9, 0 0 20px #0cbfe9, 0 0 22px #0cbfe9, 0 0 25px #0cbfe9,
     0 0 36px #0cbfe9;
 }
-@keyframes page-transition-bottom {
+@-webkit-keyframes page-transition-bottom {
   from {
+    -webkit-transform: translateY(0);
     transform: translateY(0);
   }
   to {
+    -webkit-transform: translateY(46vh);
     transform: translateY(46vh);
+  }
+}
+@keyframes page-transition-bottom {
+  from {
+    -webkit-transform: translateY(0);
+    transform: translateY(0);
+  }
+  to {
+    -webkit-transform: translateY(46vh);
+    transform: translateY(46vh);
+  }
+}
+@-webkit-keyframes page-transition-top {
+  from {
+    -webkit-transform: translateY(0);
+    transform: translateY(0);
+  }
+  to {
+    -webkit-transform: translateY(-46vh);
+    transform: translateY(-46vh);
   }
 }
 @keyframes page-transition-top {
   from {
+    -webkit-transform: translateY(0);
     transform: translateY(0);
   }
   to {
+    -webkit-transform: translateY(-46vh);
     transform: translateY(-46vh);
   }
 }
@@ -64,8 +109,14 @@ a {
   margin: 15vh 16px 0;
   .title {
     background: #830044;
-    background: -webkit-linear-gradient(to top, #830044 10%, #ff0078 44%);
-    background: -moz-linear-gradient(to top, #830044 10%, #ff0078 44%);
+    background: -webkit-gradient(
+      linear,
+      left bottom,
+      left top,
+      color-stop(10%, #830044),
+      color-stop(44%, #ff0078)
+    );
+    background: -o-linear-gradient(bottom, #830044 10%, #ff0078 44%);
     background: linear-gradient(to top, #830044 10%, #ff0078 44%);
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
@@ -77,10 +128,14 @@ a {
     font-size: 1rem;
     margin-top: 25vh;
     .work-list {
+      -webkit-padding-start: 0;
       padding-inline-start: 0;
       padding-bottom: 62px;
       list-style: none;
+      display: -webkit-box;
+      display: -ms-flexbox;
       display: flex;
+      -ms-flex-wrap: wrap;
       flex-wrap: wrap;
       li {
         margin: 0px 0px 175px;
@@ -95,7 +150,11 @@ a {
           margin-top: 6px;
         }
         .project-links {
+          display: -webkit-box;
+          display: -ms-flexbox;
           display: flex;
+          -webkit-box-align: center;
+          -ms-flex-align: center;
           align-items: center;
           gap: 16px;
           a {
@@ -112,16 +171,14 @@ a {
             &:hover,
             &:focus {
               background: #830044;
-              background: -webkit-linear-gradient(
-                to top,
-                #830044 10%,
-                #ff0078 44%
+              background: -webkit-gradient(
+                linear,
+                left bottom,
+                left top,
+                color-stop(10%, #830044),
+                color-stop(44%, #ff0078)
               );
-              background: -moz-linear-gradient(
-                to top,
-                #830044 10%,
-                #ff0078 44%
-              );
+              background: -o-linear-gradient(bottom, #830044 10%, #ff0078 44%);
               background: linear-gradient(to top, #830044 10%, #ff0078 44%);
               -webkit-background-clip: text;
               -webkit-text-fill-color: transparent;
@@ -187,7 +244,11 @@ a {
       max-width: 62rem;
       .work-list {
         li {
+          display: -webkit-box;
+          display: -ms-flexbox;
           display: flex;
+          -webkit-box-align: center;
+          -ms-flex-align: center;
           align-items: center;
           gap: 70px;
           img {

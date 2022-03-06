@@ -1,13 +1,26 @@
+/*
+* Prefixed by https://autoprefixer.github.io
+* PostCSS: v8.3.6,
+* Autoprefixer: v10.3.1
+* Browsers: last 4 version
+*/
+
 body {
   font-family: $ff-primary;
 }
 
 .navbar-mobile {
   background: transparent;
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
+  -webkit-box-pack: justify;
+  -ms-flex-pack: justify;
   justify-content: space-between;
   padding-top: 48px;
   .logo {
+    -ms-flex-item-align: center;
+    -ms-grid-row-align: center;
     align-self: center;
     cursor: pointer;
     margin-left: 26px;
@@ -22,16 +35,31 @@ body {
     display: block;
     cursor: pointer;
     background: #830044;
-    background: -webkit-linear-gradient(to top, #830044 10%, #ff0078 44%);
-    background: -moz-linear-gradient(to top, #830044 10%, #ff0078 44%);
+    background: -webkit-gradient(
+      linear,
+      left bottom,
+      left top,
+      color-stop(10%, #830044),
+      color-stop(44%, #ff0078)
+    );
+    background: -o-linear-gradient(bottom, #830044 10%, #ff0078 44%);
     background: linear-gradient(to top, #830044 10%, #ff0078 44%);
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
   }
   .mainMenu {
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
+    -webkit-box-pack: center;
+    -ms-flex-pack: center;
     justify-content: center;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    -ms-flex-direction: column;
     flex-direction: column;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
     align-items: center;
     margin-top: 0;
     height: 100vh;
@@ -41,9 +69,12 @@ body {
     left: 0;
     z-index: 10;
     background-color: rgba(0, 0, 0, 0.975);
+    -webkit-transition: top 1s ease;
+    -o-transition: top 1s ease;
     transition: top 1s ease;
     display: none;
     list-style: none;
+    -webkit-padding-start: 0;
     padding-inline-start: 0;
     overflow-y: auto;
     .nav-items {
@@ -53,14 +84,18 @@ body {
           padding: 15px;
           text-decoration: none;
           background: #830044;
-          background: -webkit-linear-gradient(to top, #830044 10%, #ff0078 44%);
-          background: -moz-linear-gradient(to top, #830044 10%, #ff0078 44%);
+          background: -webkit-gradient(
+            linear,
+            left bottom,
+            left top,
+            color-stop(10%, #830044),
+            color-stop(44%, #ff0078)
+          );
+          background: -o-linear-gradient(bottom, #830044 10%, #ff0078 44%);
           background: linear-gradient(to top, #830044 10%, #ff0078 44%);
           -webkit-background-clip: text;
           -webkit-text-fill-color: transparent;
           background: #830044;
-          background: -webkit-linear-gradient(to top, #830044 10%, #ff0078 44%);
-          background: -moz-linear-gradient(to top, #830044 10%, #ff0078 44%);
           background: linear-gradient(to top, #830044 10%, #ff0078 44%);
           -webkit-background-clip: text;
           -webkit-text-fill-color: transparent;
@@ -84,12 +119,25 @@ body {
               border: solid 2px #830044;
               border-color: #830044 transparent transparent transparent;
               border-radius: 90%;
+              -webkit-transform-origin: bottom right;
+              -ms-transform-origin: bottom right;
               transform-origin: bottom right;
+              -webkit-transform: scaleX(0);
+              -ms-transform: scaleX(0);
               transform: scaleX(0);
+              -webkit-transition: -webkit-transform 100ms ease-out;
+              transition: -webkit-transform 100ms ease-out;
+              -o-transition: transform 100ms ease-out;
               transition: transform 100ms ease-out;
+              transition: transform 100ms ease-out,
+                -webkit-transform 100ms ease-out;
             }
             &:active::after {
+              -webkit-transform: scale(1);
+              -ms-transform: scale(1);
               transform: scale(1);
+              -webkit-transform-origin: bottom left;
+              -ms-transform-origin: bottom left;
               transform-origin: bottom left;
             }
           }
@@ -103,8 +151,14 @@ body {
       top: 2.5vh;
       right: 5vw;
       background: #830044;
-      background: -webkit-linear-gradient(to top, #830044 10%, #ff0078 44%);
-      background: -moz-linear-gradient(to top, #830044 10%, #ff0078 44%);
+      background: -webkit-gradient(
+        linear,
+        left bottom,
+        left top,
+        color-stop(10%, #830044),
+        color-stop(44%, #ff0078)
+      );
+      background: -o-linear-gradient(bottom, #830044 10%, #ff0078 44%);
       background: linear-gradient(to top, #830044 10%, #ff0078 44%);
       -webkit-background-clip: text;
       -webkit-text-fill-color: transparent;
@@ -116,8 +170,14 @@ body {
       padding: 12px;
       cursor: pointer;
       background: #830044;
-      background: -webkit-linear-gradient(to top, #830044 10%, #ff0078 44%);
-      background: -moz-linear-gradient(to top, #830044 10%, #ff0078 44%);
+      background: -webkit-gradient(
+        linear,
+        left bottom,
+        left top,
+        color-stop(10%, #830044),
+        color-stop(44%, #ff0078)
+      );
+      background: -o-linear-gradient(bottom, #830044 10%, #ff0078 44%);
       background: linear-gradient(to top, #830044 10%, #ff0078 44%);
       -webkit-background-clip: text;
       -webkit-text-fill-color: transparent;

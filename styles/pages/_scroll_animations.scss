@@ -1,33 +1,83 @@
+/*
+* Prefixed by https://autoprefixer.github.io
+* PostCSS: v8.3.6,
+* Autoprefixer: v10.3.1
+* Browsers: last 4 version
+*/
+
 /*--HOMEPAGE CONTENT--*/
 
 /*NAME LOGO*/
 /*triangle*/
 .flipInY {
+  -webkit-backface-visibility: visible !important;
   backface-visibility: visible !important;
+  -webkit-animation-name: flipInY;
   animation-name: flipInY;
+  -webkit-animation-duration: 2s;
   animation-duration: 2s;
+  -webkit-animation-fill-mode: both;
   animation-fill-mode: both;
+  -webkit-animation-delay: 4.25s;
   animation-delay: 4.25s;
 }
 
-@keyframes flipInY {
+@-webkit-keyframes flipInY {
   0% {
+    -webkit-transform: rotate3d(0, 1, 0, 360deg);
     transform: rotate3d(0, 1, 0, 360deg);
+    -webkit-transition-timing-function: ease-in;
     transition-timing-function: ease-in;
     opacity: 0;
   }
   40% {
+    -webkit-transform: rotate3d(0, 1, 0, -20deg);
     transform: rotate3d(0, 1, 0, -20deg);
+    -webkit-transition-timing-function: ease-in;
     transition-timing-function: ease-in;
   }
   60% {
+    -webkit-transform: rotate3d(0, 1, 0, 10deg);
     transform: rotate3d(0, 1, 0, 10deg);
     opacity: 1;
   }
   80% {
+    -webkit-transform: rotate3d(0, 1, 0, -5deg);
     transform: rotate3d(0, 1, 0, -5deg);
   }
   100% {
+    -webkit-transform: perspective(2000px);
+    transform: perspective(2000px);
+  }
+}
+
+@keyframes flipInY {
+  0% {
+    -webkit-transform: rotate3d(0, 1, 0, 360deg);
+    transform: rotate3d(0, 1, 0, 360deg);
+    -webkit-transition-timing-function: ease-in;
+    -o-transition-timing-function: ease-in;
+    transition-timing-function: ease-in;
+    opacity: 0;
+  }
+  40% {
+    -webkit-transform: rotate3d(0, 1, 0, -20deg);
+    transform: rotate3d(0, 1, 0, -20deg);
+    -webkit-transition-timing-function: ease-in;
+    -o-transition-timing-function: ease-in;
+    transition-timing-function: ease-in;
+  }
+  60% {
+    -webkit-transform: rotate3d(0, 1, 0, 10deg);
+    transform: rotate3d(0, 1, 0, 10deg);
+    opacity: 1;
+  }
+  80% {
+    -webkit-transform: rotate3d(0, 1, 0, -5deg);
+    transform: rotate3d(0, 1, 0, -5deg);
+  }
+  100% {
+    -webkit-transform: perspective(2000px);
     transform: perspective(2000px);
   }
 }
@@ -35,10 +85,23 @@
 /*h1 (Robert Uebelhor)*/
 .name-ani,
 .name-ani::after {
+  -webkit-animation-name: name-ani;
   animation-name: name-ani;
+  -webkit-animation-duration: 500ms;
   animation-duration: 500ms;
+  -webkit-animation-delay: 6s;
   animation-delay: 6s;
+  -webkit-animation-fill-mode: forwards;
   animation-fill-mode: forwards;
+}
+@-webkit-keyframes name-ani {
+  0% {
+    opacity: 0;
+  }
+
+  100% {
+    opacity: 1;
+  }
 }
 @keyframes name-ani {
   0% {
@@ -52,37 +115,75 @@
 
 /*title animations*/
 .title-ani {
+  -webkit-animation-name: title-ani;
   animation-name: title-ani;
+  -webkit-animation-delay: 1s;
   animation-delay: 1s;
+  -webkit-animation-duration: 400ms;
   animation-duration: 400ms;
+  -webkit-animation-timing-function: ease-out;
   animation-timing-function: ease-out;
+  -webkit-animation-fill-mode: forwards;
   animation-fill-mode: forwards;
 }
-@keyframes title-ani {
+@-webkit-keyframes title-ani {
   0% {
     opacity: 0;
+    -webkit-transform: translateY(-20px);
     transform: translateY(-20px);
   }
   100% {
     opacity: 1;
+    -webkit-transform: translate(0);
+    transform: translate(0);
+  }
+}
+@keyframes title-ani {
+  0% {
+    opacity: 0;
+    -webkit-transform: translateY(-20px);
+    transform: translateY(-20px);
+  }
+  100% {
+    opacity: 1;
+    -webkit-transform: translate(0);
     transform: translate(0);
   }
 }
 /*about me text*/
 .about-me-text-ani {
+  -webkit-animation-name: about-me-text-ani;
   animation-name: about-me-text-ani;
+  -webkit-animation-delay: 2s;
   animation-delay: 2s;
+  -webkit-animation-duration: 400ms;
   animation-duration: 400ms;
+  -webkit-animation-timing-function: ease-out;
   animation-timing-function: ease-out;
+  -webkit-animation-fill-mode: forwards;
   animation-fill-mode: forwards;
 }
-@keyframes about-me-text-ani {
+@-webkit-keyframes about-me-text-ani {
   0% {
     opacity: 0;
+    -webkit-transform: translateY(-20px);
     transform: translateY(-20px);
   }
   100% {
     opacity: 1;
+    -webkit-transform: translate(0);
+    transform: translate(0);
+  }
+}
+@keyframes about-me-text-ani {
+  0% {
+    opacity: 0;
+    -webkit-transform: translateY(-20px);
+    transform: translateY(-20px);
+  }
+  100% {
+    opacity: 1;
+    -webkit-transform: translate(0);
     transform: translate(0);
   }
 }
@@ -93,8 +194,26 @@
 .sun-ani,
 .graph-ani {
   opacity: 0;
+  -webkit-transition: opacity 0.75s ease-out;
+  -o-transition: opacity 0.75s ease-out;
   transition: opacity 0.75s ease-out;
+  -webkit-transition: -webkit-transform 0.75s ease-out;
+  transition: -webkit-transform 0.75s ease-out;
+  -o-transition: transform 0.75s ease-out;
   transition: transform 0.75s ease-out;
+  transition: transform 0.75s ease-out, -webkit-transform 0.75s ease-out;
+}
+
+@-webkit-keyframes sun-n-graph {
+  0% {
+    opacity: 0;
+  }
+  50% {
+    opacity: 0.5;
+  }
+  100% {
+    opacity: 1;
+  }
 }
 
 @keyframes sun-n-graph {
@@ -110,6 +229,7 @@
 }
 
 .appear {
+  -webkit-animation: sun-n-graph 1s;
   animation: sun-n-graph 1s;
 }
 
@@ -117,45 +237,90 @@
 .graph-ani {
   &.appear {
     opacity: 1;
+    -webkit-transform: translate(0);
+    -ms-transform: translate(0);
     transform: translate(0);
   }
 }
 .sun-ani {
+  -webkit-transform: translateY(50px);
+  -ms-transform: translateY(50px);
   transform: translateY(50px);
 }
 .graph-ani {
+  -webkit-transform: translateY(50px);
+  -ms-transform: translateY(50px);
   transform: translateY(50px);
 }
 
 /*work page projects*/
 
 .work-1st-ani {
+  -webkit-animation-name: work-1st-ani;
   animation-name: work-1st-ani;
+  -webkit-animation-duration: 1s;
   animation-duration: 1s;
+  -webkit-animation-timing-function: ease-out;
   animation-timing-function: ease-out;
+  -webkit-animation-fill-mode: forwards;
   animation-fill-mode: forwards;
+  -webkit-animation-delay: 1.75s;
   animation-delay: 1.75s;
+}
+
+@-webkit-keyframes work-1st-ani {
+  0% {
+    opacity: 0;
+    -webkit-transform: translateX(-20%);
+    transform: translateX(-20%);
+  }
+  100% {
+    opacity: 1;
+    -webkit-transform: translateX(0%);
+    transform: translateX(0%);
+  }
 }
 
 @keyframes work-1st-ani {
   0% {
     opacity: 0;
+    -webkit-transform: translateX(-20%);
     transform: translateX(-20%);
   }
   100% {
     opacity: 1;
+    -webkit-transform: translateX(0%);
     transform: translateX(0%);
   }
 }
 
 .slide-right {
   opacity: 0;
+  -webkit-transition: opacity 1s ease-out;
+  -o-transition: opacity 1s ease-out;
   transition: opacity 1s ease-out;
+  -webkit-transition: -webkit-transform 1s ease-out;
+  transition: -webkit-transform 1s ease-out;
+  -o-transition: transform 1s ease-out;
   transition: transform 1s ease-out;
+  transition: transform 1s ease-out, -webkit-transform 1s ease-out;
 }
 
 .appear-work {
+  -webkit-animation: fade-in 1s forwards;
   animation: fade-in 1s forwards;
+}
+
+@-webkit-keyframes fade-in {
+  0% {
+    opacity: 0;
+  }
+  50% {
+    opacity: 0.5;
+  }
+  100% {
+    opacity: 1;
+  }
 }
 
 @keyframes fade-in {
@@ -173,10 +338,14 @@
 .slide-right {
   &.appear-work {
     opacity: 1;
+    -webkit-transform: translate(0);
+    -ms-transform: translate(0);
     transform: translate(0);
   }
 }
 
 .slide-right {
+  -webkit-transform: translateX(-20%);
+  -ms-transform: translateX(-20%);
   transform: translateX(-20%);
 }

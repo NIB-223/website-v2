@@ -1,3 +1,10 @@
+/*
+* Prefixed by https://autoprefixer.github.io
+* PostCSS: v8.3.6,
+* Autoprefixer: v10.3.1
+* Browsers: last 4 version
+*/
+
 @font-face {
   font-family: kimberly;
   src: url(../../fonts/kimberley\ bl.ttf);
@@ -17,22 +24,42 @@
   top: 0;
   left: 0;
   width: 100%;
+  -webkit-animation-name: page-transition-top;
   animation-name: page-transition-top;
+  -webkit-animation-duration: 750ms;
   animation-duration: 750ms;
+  -webkit-animation-timing-function: ease-in;
   animation-timing-function: ease-in;
+  -webkit-animation-fill-mode: forwards;
   animation-fill-mode: forwards;
+  -webkit-animation-delay: 2.75s;
   animation-delay: 2.75s;
   border-bottom: 4px solid #fff;
   color: #fff;
+  -webkit-box-shadow: 0 0px 1.5px #99ffff, 0 0px 2.5px #99ffff,
+    0 0px 5.5px #99ffff, 0 0px 10px #0cbfe9, 0 0px 20px #0cbfe9,
+    0 0px 22px #0cbfe9, 0 0px 25px #0cbfe9, 0 0px 36px #0cbfe9;
   box-shadow: 0 0px 1.5px #99ffff, 0 0px 2.5px #99ffff, 0 0px 5.5px #99ffff,
     0 0px 10px #0cbfe9, 0 0px 20px #0cbfe9, 0 0px 22px #0cbfe9,
     0 0px 25px #0cbfe9, 0 0px 36px #0cbfe9;
 }
-@keyframes page-transition-top {
+@-webkit-keyframes page-transition-top {
   from {
+    -webkit-transform: translateY(0);
     transform: translateY(0);
   }
   to {
+    -webkit-transform: translateY(-46vh);
+    transform: translateY(-46vh);
+  }
+}
+@keyframes page-transition-top {
+  from {
+    -webkit-transform: translateY(0);
+    transform: translateY(0);
+  }
+  to {
+    -webkit-transform: translateY(-46vh);
     transform: translateY(-46vh);
   }
 }
@@ -45,22 +72,42 @@
   top: 50vh;
   left: 0;
   width: 100%;
+  -webkit-animation-name: page-transition-bottom;
   animation-name: page-transition-bottom;
+  -webkit-animation-duration: 750ms;
   animation-duration: 750ms;
+  -webkit-animation-timing-function: ease-in;
   animation-timing-function: ease-in;
+  -webkit-animation-fill-mode: forwards;
   animation-fill-mode: forwards;
+  -webkit-animation-delay: 2.75s;
   animation-delay: 2.75s;
   border-top: 4px solid #fff;
   color: #fff;
+  -webkit-box-shadow: 0 0 1.5px #99ffff, 0 0 2.5px #99ffff, 0 0 5.5px #99ffff,
+    0 0 10px #0cbfe9, 0 0 20px #0cbfe9, 0 0 22px #0cbfe9, 0 0 25px #0cbfe9,
+    0 0 36px #0cbfe9;
   box-shadow: 0 0 1.5px #99ffff, 0 0 2.5px #99ffff, 0 0 5.5px #99ffff,
     0 0 10px #0cbfe9, 0 0 20px #0cbfe9, 0 0 22px #0cbfe9, 0 0 25px #0cbfe9,
     0 0 36px #0cbfe9;
 }
-@keyframes page-transition-bottom {
+@-webkit-keyframes page-transition-bottom {
   from {
+    -webkit-transform: translateY(0);
     transform: translateY(0);
   }
   to {
+    -webkit-transform: translateY(46vh);
+    transform: translateY(46vh);
+  }
+}
+@keyframes page-transition-bottom {
+  from {
+    -webkit-transform: translateY(0);
+    transform: translateY(0);
+  }
+  to {
+    -webkit-transform: translateY(46vh);
     transform: translateY(46vh);
   }
 }
@@ -72,11 +119,18 @@
   z-index: 10;
   top: 50%;
   left: 50%;
+  -webkit-transform: translateY(-50%) translateX(-50%);
+  -ms-transform: translateY(-50%) translateX(-50%);
   transform: translateY(-50%) translateX(-50%);
+  -webkit-animation-name: logo-preloader;
   animation-name: logo-preloader;
+  -webkit-animation-delay: 200ms;
   animation-delay: 200ms;
+  -webkit-animation-duration: 1s;
   animation-duration: 1s;
+  -webkit-animation-iteration-count: 3;
   animation-iteration-count: 3;
+  -webkit-animation-timing-function: ease;
   animation-timing-function: ease;
 }
 @-webkit-keyframes logo-preloader {
@@ -110,6 +164,19 @@
 
 /*BACKGROUND VIDEO*/
 .video-overlay {
+  background: -webkit-gradient(
+    linear,
+    left top,
+    left bottom,
+    from(rgba(0, 0, 0, 0.65)),
+    color-stop(rgba(0, 0, 0, 0.3)),
+    to(rgba(0, 0, 0, 0.3))
+  );
+  background: -o-linear-gradient(
+    rgba(0, 0, 0, 0.65),
+    rgba(0, 0, 0, 0.3),
+    rgba(0, 0, 0, 0.3)
+  );
   background: linear-gradient(
     rgba(0, 0, 0, 0.65),
     rgba(0, 0, 0, 0.3),
@@ -123,6 +190,7 @@
   height: 100%;
 }
 #myVideo {
+  -o-object-fit: cover;
   object-fit: cover;
   position: fixed;
   left: 0;
@@ -139,6 +207,7 @@
   .content-wrapper {
     z-index: 0;
     position: relative;
+    display: -ms-grid;
     display: grid;
     justify-items: center;
     margin-top: 20vh;
@@ -148,6 +217,7 @@
         width: 350px;
         max-width: 100%;
         padding: 0 32px;
+        -webkit-filter: brightness(85%);
         filter: brightness(85%);
         position: relative;
       }
@@ -159,6 +229,22 @@
     }
 
     h1 {
+      background: -webkit-gradient(
+        linear,
+        left top,
+        left bottom,
+        from(#ebf1f6),
+        color-stop(50%, #abd3ee),
+        color-stop(51%, #859ee2),
+        to(#d5ebfb)
+      );
+      background: -o-linear-gradient(
+        top,
+        #ebf1f6 0%,
+        #abd3ee 50%,
+        #859ee2 51%,
+        #d5ebfb 100%
+      );
       background: linear-gradient(
         to bottom,
         #ebf1f6 0%,
@@ -172,6 +258,8 @@
       font-family: kimberly;
       text-transform: uppercase;
       font-size: 2.25rem;
+      -webkit-transition: font-size 1s;
+      -o-transition: font-size 1s;
       transition: font-size 1s;
       display: inline;
       opacity: 0;
@@ -196,14 +284,38 @@
       color: #fff;
       -webkit-text-stroke: 0.01px rgba(180, 180, 180, 0.438);
       text-shadow: 0 0 26px rgba(68, 68, 68, 0.438);
+      -webkit-animation: flicker 1.5s 6.45s infinite alternate,
+        web-dev-ani 250ms 6.5s forwards;
       animation: flicker 1.5s 6.45s infinite alternate,
         web-dev-ani 250ms 6.5s forwards;
+      -webkit-transform: rotate(-8deg);
+      -ms-transform: rotate(-8deg);
       transform: rotate(-8deg);
       font-size: 2rem;
       position: absolute;
       top: 40%;
       font-family: $ff-web-dev;
       opacity: 0;
+    }
+    @-webkit-keyframes flicker {
+      0%,
+      10%,
+      22%,
+      25%,
+      53%,
+      57%,
+      100% {
+        -webkit-text-stroke: 0px;
+        color: #eec5ee;
+        text-shadow: 0 0 4px #f7adf7, 0 0 11px #f7adf7, 0 0 19px #f7adf7,
+          0 0 40px #ff00aa, 0 0 80px #ff00aa, 0 0 90px #ff00aa,
+          0 0 100px #ff00aa, 0 0 150px #ff00aa;
+      }
+      20%,
+      24%,
+      55% {
+        text-shadow: none;
+      }
     }
     @keyframes flicker {
       0%,
@@ -223,6 +335,14 @@
       24%,
       55% {
         text-shadow: none;
+      }
+    }
+    @-webkit-keyframes web-dev-ani {
+      0% {
+        opacity: 0;
+      }
+      100% {
+        opacity: 1;
       }
     }
     @keyframes web-dev-ani {

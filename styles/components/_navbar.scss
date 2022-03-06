@@ -1,3 +1,10 @@
+/*
+* Prefixed by https://autoprefixer.github.io
+* PostCSS: v8.3.6,
+* Autoprefixer: v10.3.1
+* Browsers: last 4 version
+*/
+
 @font-face {
   font-family: Brat;
   src: url("../../fonts/Brat.ttf");
@@ -21,14 +28,26 @@ a {
 .desktop-header {
   display: none;
   .navbar {
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
+    -webkit-box-pack: justify;
+    -ms-flex-pack: justify;
     justify-content: space-between;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
     align-items: center;
     gap: 36px;
     padding-top: 65px;
     .logo {
+      display: -webkit-box;
+      display: -ms-flexbox;
       display: flex;
+      -webkit-box-pack: center;
+      -ms-flex-pack: center;
       justify-content: center;
+      -webkit-box-align: center;
+      -ms-flex-align: center;
       align-items: center;
       margin-left: 42px;
 
@@ -39,7 +58,11 @@ a {
   }
 
   .navbar-menu {
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
     align-items: center;
     gap: 32px;
     .nav-items {
@@ -50,8 +73,14 @@ a {
         font-family: Brat;
         font-size: 2.75rem;
         background: #830044;
-        background: -webkit-linear-gradient(to top, #830044 10%, #ff0078 44%);
-        background: -moz-linear-gradient(to top, #830044 10%, #ff0078 44%);
+        background: -webkit-gradient(
+          linear,
+          left bottom,
+          left top,
+          color-stop(10%, #830044),
+          color-stop(44%, #ff0078)
+        );
+        background: -o-linear-gradient(bottom, #830044 10%, #ff0078 44%);
         background: linear-gradient(to top, #830044 10%, #ff0078 44%);
         -webkit-background-clip: text;
         -webkit-text-fill-color: transparent;
@@ -73,12 +102,25 @@ a {
             border: solid 2px #830044;
             border-color: #830044 transparent transparent transparent;
             border-radius: 90%;
+            -webkit-transform-origin: bottom right;
+            -ms-transform-origin: bottom right;
             transform-origin: bottom right;
+            -webkit-transform: scaleX(0);
+            -ms-transform: scaleX(0);
             transform: scaleX(0);
+            -webkit-transition: -webkit-transform 100ms ease-out;
+            transition: -webkit-transform 100ms ease-out;
+            -o-transition: transform 100ms ease-out;
             transition: transform 100ms ease-out;
+            transition: transform 100ms ease-out,
+              -webkit-transform 100ms ease-out;
           }
           &:hover::after {
+            -webkit-transform: scale(1);
+            -ms-transform: scale(1);
             transform: scale(1);
+            -webkit-transform-origin: bottom left;
+            -ms-transform-origin: bottom left;
             transform-origin: bottom left;
           }
         }
@@ -86,7 +128,11 @@ a {
     }
     /*social*/
     .social-container {
+      display: -webkit-box;
+      display: -ms-flexbox;
       display: flex;
+      -webkit-box-align: center;
+      -ms-flex-align: center;
       align-items: center;
       margin: 0 24px;
       a {
@@ -95,8 +141,14 @@ a {
       i {
         font-size: 1.5rem;
         background: #830044;
-        background: -webkit-linear-gradient(to top, #830044 10%, #ff0078 44%);
-        background: -moz-linear-gradient(to top, #830044 10%, #ff0078 44%);
+        background: -webkit-gradient(
+          linear,
+          left bottom,
+          left top,
+          color-stop(10%, #830044),
+          color-stop(44%, #ff0078)
+        );
+        background: -o-linear-gradient(bottom, #830044 10%, #ff0078 44%);
         background: linear-gradient(to top, #830044 10%, #ff0078 44%);
         -webkit-background-clip: text;
         -webkit-text-fill-color: transparent;
