@@ -838,6 +838,10 @@ body {
   height: 100%;
 }
 
+.ios {
+  z-index: -200;
+}
+
 #myVideo {
   -o-object-fit: cover;
   object-fit: cover;
