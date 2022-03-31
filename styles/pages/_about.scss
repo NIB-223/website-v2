@@ -5,98 +5,8 @@
 * Browsers: last 4 version
 */
 
-.transition-overlay1 {
-  position: fixed;
-  background-color: black;
-  z-index: 10;
-  height: 50vh;
-  top: 0;
-  left: 0;
-  width: 100%;
-  -webkit-animation-name: page-transition-top;
-  animation-name: page-transition-top;
-  -webkit-animation-duration: 750ms;
-  animation-duration: 750ms;
-  -webkit-animation-timing-function: ease-in;
-  animation-timing-function: ease-in;
-  -webkit-animation-fill-mode: forwards;
-  animation-fill-mode: forwards;
-  border-bottom: 4px solid #fff;
-  color: #fff;
-  -webkit-box-shadow: 0 0px 1.5px #99ffff, 0 0px 2.5px #99ffff,
-    0 0px 5.5px #99ffff, 0 0px 10px #0cbfe9, 0 0px 20px #0cbfe9,
-    0 0px 22px #0cbfe9, 0 0px 25px #0cbfe9, 0 0px 36px #0cbfe9;
-  box-shadow: 0 0px 1.5px #99ffff, 0 0px 2.5px #99ffff, 0 0px 5.5px #99ffff,
-    0 0px 10px #0cbfe9, 0 0px 20px #0cbfe9, 0 0px 22px #0cbfe9,
-    0 0px 25px #0cbfe9, 0 0px 36px #0cbfe9;
-}
-.transition-overlay2 {
-  position: fixed;
-  background-color: black;
-  z-index: 10;
-  height: 50vh;
-  top: 50vh;
-  left: 0;
-  width: 100%;
-  -webkit-animation-name: page-transition-bottom;
-  animation-name: page-transition-bottom;
-  -webkit-animation-duration: 750ms;
-  animation-duration: 750ms;
-  -webkit-animation-timing-function: ease-in;
-  animation-timing-function: ease-in;
-  -webkit-animation-fill-mode: forwards;
-  animation-fill-mode: forwards;
-  border-top: 4px solid #fff;
-  color: #fff;
-  -webkit-box-shadow: 0 0 1.5px #99ffff, 0 0 2.5px #99ffff, 0 0 5.5px #99ffff,
-    0 0 10px #0cbfe9, 0 0 20px #0cbfe9, 0 0 22px #0cbfe9, 0 0 25px #0cbfe9,
-    0 0 36px #0cbfe9;
-  box-shadow: 0 0 1.5px #99ffff, 0 0 2.5px #99ffff, 0 0 5.5px #99ffff,
-    0 0 10px #0cbfe9, 0 0 20px #0cbfe9, 0 0 22px #0cbfe9, 0 0 25px #0cbfe9,
-    0 0 36px #0cbfe9;
-}
-@-webkit-keyframes page-transition-bottom {
-  from {
-    -webkit-transform: translateY(0);
-    transform: translateY(0);
-  }
-  to {
-    -webkit-transform: translateY(46vh);
-    transform: translateY(46vh);
-  }
-}
-@keyframes page-transition-bottom {
-  from {
-    -webkit-transform: translateY(0);
-    transform: translateY(0);
-  }
-  to {
-    -webkit-transform: translateY(46vh);
-    transform: translateY(46vh);
-  }
-}
-@-webkit-keyframes page-transition-top {
-  from {
-    -webkit-transform: translateY(0);
-    transform: translateY(0);
-  }
-  to {
-    -webkit-transform: translateY(-46vh);
-    transform: translateY(-46vh);
-  }
-}
-@keyframes page-transition-top {
-  from {
-    -webkit-transform: translateY(0);
-    transform: translateY(0);
-  }
-  to {
-    -webkit-transform: translateY(-46vh);
-    transform: translateY(-46vh);
-  }
-}
 .pages-wrapper {
-  margin: 15vh 16px 0;
+  margin: 15vh 1.5rem 0;
   .about-title {
     background: #830044;
     background: -webkit-gradient(
@@ -125,9 +35,9 @@
 
 .button-wrapper {
   text-align: left;
-  margin-top: 36px;
+  margin-top: 3.5rem;
   a {
-    padding: 6px 40px;
+    padding: 0.5rem 4rem;
     background: #830044;
     background: -webkit-gradient(
       linear,
@@ -138,6 +48,9 @@
     );
     background: -o-linear-gradient(bottom, #830044 10%, #ff0078 44%);
     background: linear-gradient(to top, #830044 10%, #ff0078 44%);
+  }
+  &:active {
+    transform: translateY(1px);
   }
 }
 
@@ -187,7 +100,7 @@
     .sun {
       position: absolute;
       left: 70%;
-      bottom: -45px;
+      bottom: -4.5rem;
       margin: 0;
       width: 125px;
       height: 125px;
@@ -210,7 +123,7 @@
     }
   }
   .button-wrapper {
-    margin-bottom: 30px;
+    margin-bottom: 3rem;
   }
 }
 
@@ -232,11 +145,12 @@
   .about-text {
     font-size: 1.5rem;
   }
+
   .button-wrapper {
     text-align: left;
-    margin-bottom: 40px;
+    margin-bottom: 4rem;
     a {
-      padding: 8px 44px;
+      padding: 0.75rem 4.4rem;
     }
   }
 }

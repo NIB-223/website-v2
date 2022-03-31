@@ -1,8 +1,10 @@
 @import "./base";
 @import "./variables";
 
-@import "./pages/scroll_animations";
+@import "./scroll_animations";
 
 @import "./pages/home";
 @import "./pages/about";
 @import "./pages/work";
+
+@import "./components/page_transitions";

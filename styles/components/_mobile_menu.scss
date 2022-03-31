@@ -125,12 +125,12 @@ body {
               -webkit-transform: scaleX(0);
               -ms-transform: scaleX(0);
               transform: scaleX(0);
-              -webkit-transition: -webkit-transform 100ms ease-out;
-              transition: -webkit-transform 100ms ease-out;
-              -o-transition: transform 100ms ease-out;
-              transition: transform 100ms ease-out;
-              transition: transform 100ms ease-out,
-                -webkit-transform 100ms ease-out;
+              -webkit-transition: -webkit-transform 100ms ease-in-out;
+              transition: -webkit-transform 100ms ease-in-out;
+              -o-transition: transform 100ms ease-in-out;
+              transition: transform 100ms ease-in-out;
+              transition: transform 100ms ease-in-out,
+                -webkit-transform 100ms ease-in-out;
             }
             &:active::after {
               -webkit-transform: scale(1);
