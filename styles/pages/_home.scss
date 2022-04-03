@@ -19,27 +19,9 @@
 .video-overlay {
   background: radial-gradient(
     circle,
-    rgba(0, 0, 0, 0.65) 0%,
+    rgba(0, 0, 0, 0.815) 0%,
     rgba(0, 0, 0, 0.1) 40%
   );
-  // background: -webkit-gradient(
-  //   linear,
-  //   left top,
-  //   left bottom,
-  //   from(rgba(0, 0, 0, 0.65)),
-  //   color-stop(rgba(0, 0, 0, 0.3)),
-  //   to(rgba(0, 0, 0, 0.3))
-  // );
-  // background: -o-linear-gradient(
-  //   rgba(0, 0, 0, 0.65),
-  //   rgba(0, 0, 0, 0.3),
-  //   rgba(0, 0, 0, 0.3)
-  // );
-  // background: linear-gradient(
-  //   rgba(0, 0, 0, 0.65),
-  //   rgba(0, 0, 0, 0.3),
-  //   rgba(0, 0, 0, 0.3)
-  // );
   position: fixed;
   top: 0;
   left: 0;
@@ -146,9 +128,9 @@
       -webkit-text-stroke: 0.01px rgba(180, 180, 180, 0.438);
       text-shadow: 0 0 26px rgba(68, 68, 68, 0.438);
       -webkit-animation: flicker 1.5s 6.45s infinite alternate,
-        web-dev-ani 250ms 6.5s forwards;
-      animation: flicker 1.5s 6.45s infinite alternate,
-        web-dev-ani 250ms 6.5s forwards;
+        web-dev-ani 250ms 3.5s forwards;
+      animation: flicker 1.5s 4.25s infinite alternate,
+        web-dev-ani 250ms 3.5s forwards;
       -webkit-transform: rotate(-8deg);
       -ms-transform: rotate(-8deg);
       transform: rotate(-8deg);

@@ -4,172 +4,78 @@
 * Autoprefixer: v10.3.1
 * Browsers: last 4 version
 */
-
-body {
-  font-family: $ff-primary;
+ul {
+  -webkit-padding-start: 0;
+  padding-inline-start: 0;
 }
-
-.navbar-mobile {
-  background: transparent;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-pack: justify;
-  -ms-flex-pack: justify;
-  justify-content: space-between;
-  padding-top: 48px;
+.navigation {
   .logo {
     -ms-flex-item-align: center;
     -ms-grid-row-align: center;
     align-self: center;
     cursor: pointer;
-    margin-left: 26px;
-    margin-top: 8px;
+    margin-left: 1.5rem;
+    padding-top: 3.5rem;
     img {
       width: 64px;
     }
   }
-  .openMenu i {
-    font-size: 2rem;
-    margin: 20px;
-    display: block;
-    cursor: pointer;
-    background: #830044;
-    background: -webkit-gradient(
-      linear,
-      left bottom,
-      left top,
-      color-stop(10%, #830044),
-      color-stop(44%, #ff0078)
-    );
-    background: -o-linear-gradient(bottom, #830044 10%, #ff0078 44%);
-    background: linear-gradient(to top, #830044 10%, #ff0078 44%);
-    -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent;
+  &-checkbox {
+    display: none;
   }
-  .mainMenu {
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
-    -webkit-box-pack: center;
-    -ms-flex-pack: center;
-    justify-content: center;
-    -webkit-box-orient: vertical;
-    -webkit-box-direction: normal;
-    -ms-flex-direction: column;
-    flex-direction: column;
-    -webkit-box-align: center;
-    -ms-flex-align: center;
-    align-items: center;
-    margin-top: 0;
+  &-button {
+    position: absolute;
+    top: 5rem;
+    right: 2rem;
+    z-index: 101;
+    cursor: pointer;
+  }
+  &-background {
+    height: 4rem;
+    width: 4rem;
+    position: fixed;
+    top: -5rem;
+    right: -5rem;
+    border-radius: 50%;
+    background: -o-radial-gradient(rgba(0, 0, 0, 0.99), rgb(0, 0, 0, 0.99));
+    background: radial-gradient(rgba(0, 0, 0, 0.99), rgb(0, 0, 0, 0.99));
+    z-index: 100;
+    -webkit-transition: -webkit-transform 0.8s cubic-bezier(0.86, 0, 0.07, 1);
+    transition: -webkit-transform 0.8s cubic-bezier(0.86, 0, 0.07, 1);
+    -o-transition: transform 0.8s cubic-bezier(0.86, 0, 0.07, 1);
+    transition: transform 0.8s cubic-bezier(0.86, 0, 0.07, 1);
+    transition: transform 0.8s cubic-bezier(0.86, 0, 0.07, 1),
+      -webkit-transform 0.8s cubic-bezier(0.86, 0, 0.07, 1);
+  }
+  &-nav {
     height: 100vh;
     position: fixed;
-    top: -120%;
+    top: 0;
     right: 0;
-    left: 0;
-    z-index: 10;
-    background-color: rgba(0, 0, 0, 0.975);
-    -webkit-transition: top 1s ease;
-    -o-transition: top 1s ease;
-    transition: top 1s ease;
-    display: none;
+    z-index: 100;
+    opacity: 0;
+    width: 0;
+    -webkit-transition: all 0.8s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+    -o-transition: all 0.8s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+    transition: all 0.8s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+  }
+  &-list {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    -webkit-transform: translate(-50%, -50%);
+    -ms-transform: translate(-50%, -50%);
+    transform: translate(-50%, -50%);
     list-style: none;
-    -webkit-padding-start: 0;
-    padding-inline-start: 0;
-    overflow-y: auto;
-    .nav-items {
-      li {
-        a {
-          display: inline-block;
-          padding: 15px;
-          text-decoration: none;
-          background: #830044;
-          background: -webkit-gradient(
-            linear,
-            left bottom,
-            left top,
-            color-stop(10%, #830044),
-            color-stop(44%, #ff0078)
-          );
-          background: -o-linear-gradient(bottom, #830044 10%, #ff0078 44%);
-          background: linear-gradient(to top, #830044 10%, #ff0078 44%);
-          -webkit-background-clip: text;
-          -webkit-text-fill-color: transparent;
-          background: #830044;
-          background: linear-gradient(to top, #830044 10%, #ff0078 44%);
-          -webkit-background-clip: text;
-          -webkit-text-fill-color: transparent;
-          font-size: 3rem;
-          font-family: brat;
-        }
-        .about-hover,
-        .work-hover,
-        .contact-hover {
-          &.underlined {
-            display: inline-block;
-            color: #830044;
-            position: relative;
-            &::after {
-              content: "";
-              position: absolute;
-              width: 100%;
-              height: 2px;
-              bottom: 0;
-              left: 0;
-              border: solid 2px #830044;
-              border-color: #830044 transparent transparent transparent;
-              border-radius: 90%;
-              -webkit-transform-origin: bottom right;
-              -ms-transform-origin: bottom right;
-              transform-origin: bottom right;
-              -webkit-transform: scaleX(0);
-              -ms-transform: scaleX(0);
-              transform: scaleX(0);
-              -webkit-transition: -webkit-transform 100ms ease-in-out;
-              transition: -webkit-transform 100ms ease-in-out;
-              -o-transition: transform 100ms ease-in-out;
-              transition: transform 100ms ease-in-out;
-              transition: transform 100ms ease-in-out,
-                -webkit-transform 100ms ease-in-out;
-            }
-            &:active::after {
-              -webkit-transform: scale(1);
-              -ms-transform: scale(1);
-              transform: scale(1);
-              -webkit-transform-origin: bottom left;
-              -ms-transform-origin: bottom left;
-              transform-origin: bottom left;
-            }
-          }
-        }
-      }
-    }
-
-    .closeMenu i {
-      display: block;
-      position: absolute;
-      top: 2.5vh;
-      right: 5vw;
-      background: #830044;
-      background: -webkit-gradient(
-        linear,
-        left bottom,
-        left top,
-        color-stop(10%, #830044),
-        color-stop(44%, #ff0078)
-      );
-      background: -o-linear-gradient(bottom, #830044 10%, #ff0078 44%);
-      background: linear-gradient(to top, #830044 10%, #ff0078 44%);
-      -webkit-background-clip: text;
-      -webkit-text-fill-color: transparent;
-    }
-    .closeMenu,
+    width: 100%;
+    text-align: center;
     .icons i {
       font-size: 2rem;
       display: inline-block;
       padding: 12px;
       cursor: pointer;
       background: #830044;
+      background: -o-linear-gradient(bottom, #830044 10%, #ff0078 44%);
       background: -webkit-gradient(
         linear,
         left bottom,
@@ -177,7 +83,6 @@ body {
         color-stop(10%, #830044),
         color-stop(44%, #ff0078)
       );
-      background: -o-linear-gradient(bottom, #830044 10%, #ff0078 44%);
       background: linear-gradient(to top, #830044 10%, #ff0078 44%);
       -webkit-background-clip: text;
       -webkit-text-fill-color: transparent;
@@ -187,10 +92,144 @@ body {
       margin-top: 56px;
     }
   }
+  &-item {
+    margin: 1rem;
+    a {
+      display: inline-block;
+      padding: 15px;
+      text-decoration: none;
+      background: #830044;
+      background: -o-linear-gradient(bottom, #830044 10%, #ff0078 44%);
+      background: -webkit-gradient(
+        linear,
+        left bottom,
+        left top,
+        color-stop(10%, #830044),
+        color-stop(44%, #ff0078)
+      );
+      background: linear-gradient(to top, #830044 10%, #ff0078 44%);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      background: #830044;
+      background: linear-gradient(to top, #830044 10%, #ff0078 44%);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      font-size: 2.5rem;
+      font-family: brat;
+    }
+    .about-hover,
+    .work-hover,
+    .contact-hover {
+      &.underlined {
+        display: inline-block;
+        color: #830044;
+        position: relative;
+        &::after {
+          content: "";
+          position: absolute;
+          width: 100%;
+          height: 2px;
+          bottom: 0;
+          left: 0;
+          border: solid 2px #830044;
+          border-color: #830044 transparent transparent transparent;
+          border-radius: 90%;
+          -webkit-transform-origin: bottom right;
+          -ms-transform-origin: bottom right;
+          transform-origin: bottom right;
+          -webkit-transform: scaleX(0);
+          -ms-transform: scaleX(0);
+          transform: scaleX(0);
+          -webkit-transition: -webkit-transform 100ms ease-in-out;
+          transition: -webkit-transform 100ms ease-in-out;
+          -o-transition: transform 100ms ease-in-out;
+          transition: transform 100ms ease-in-out;
+          transition: transform 100ms ease-in-out,
+            -webkit-transform 100ms ease-in-out;
+          transition: transform 100ms ease-in-out,
+            -webkit-transform 100ms ease-in-out;
+        }
+        &:active::after {
+          -webkit-transform: scale(1);
+          -ms-transform: scale(1);
+          transform: scale(1);
+          -webkit-transform-origin: bottom left;
+          -ms-transform-origin: bottom left;
+          transform-origin: bottom left;
+        }
+      }
+    }
+  }
+
+  &-checkbox:checked ~ &-background {
+    -webkit-transform: scale(80);
+    -ms-transform: scale(80);
+    transform: scale(80);
+  }
+
+  &-checkbox:checked ~ &-nav {
+    opacity: 1;
+    width: 100%;
+  }
+
+  &-icon {
+    position: relative;
+    &,
+    &::before,
+    &::after {
+      width: 2.5rem;
+      height: 3px;
+      background-color: #fe007a;
+      display: inline-block;
+      border-radius: 90%;
+    }
+
+    &::before,
+    &::after {
+      content: "";
+      position: absolute;
+      left: 0;
+      -webkit-transition: all 0.2s;
+      -o-transition: all 0.2s;
+      transition: all 0.2s;
+    }
+    &::before {
+      top: -0.8rem;
+    }
+    &::after {
+      top: 0.8rem;
+    }
+  }
+
+  &-button:hover &-icon::before {
+    top: -1rem;
+  }
+  &-button:hover &-icon::after {
+    top: 1rem;
+  }
+
+  &-checkbox:checked + &-button &-icon {
+    background-color: transparent;
+  }
+  &-checkbox:checked + &-button &-icon::before {
+    top: 0;
+    -webkit-transform: rotate(135deg);
+    -ms-transform: rotate(135deg);
+    transform: rotate(135deg);
+  }
+  &-checkbox:checked + &-button &-icon::after {
+    top: 0;
+    -webkit-transform: rotate(-135deg);
+    -ms-transform: rotate(-135deg);
+    transform: rotate(-135deg);
+  }
+  &-checkbox:checked + &-button {
+    position: fixed;
+  }
 }
 
 @media (min-width: map-get($viewport_size, m)) {
-  .navbar-mobile {
+  .navigation {
     display: none;
   }
 }

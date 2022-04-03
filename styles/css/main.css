@@ -47,7 +47,7 @@ body {
   -webkit-animation-fill-mode: both;
   animation-fill-mode: both;
   -webkit-animation-delay: 4.25s;
-  animation-delay: 4.25s;
+  animation-delay: 1.25s;
 }
 
 @-webkit-keyframes flipInY {
@@ -116,7 +116,7 @@ body {
   -webkit-animation-duration: 500ms;
   animation-duration: 500ms;
   -webkit-animation-delay: 6s;
-  animation-delay: 6s;
+  animation-delay: 3s;
   -webkit-animation-fill-mode: forwards;
   animation-fill-mode: forwards;
 }
@@ -526,81 +526,97 @@ a {
 * Autoprefixer: v10.3.1
 * Browsers: last 4 version
 */
-body {
-  font-family: "Jura", sans-serif;
+ul {
+  -webkit-padding-start: 0;
+  padding-inline-start: 0;
 }
 
-.navbar-mobile {
-  background: transparent;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-pack: justify;
-  -ms-flex-pack: justify;
-  justify-content: space-between;
-  padding-top: 48px;
-}
-.navbar-mobile .logo {
+.navigation .logo {
   -ms-flex-item-align: center;
   -ms-grid-row-align: center;
   align-self: center;
   cursor: pointer;
-  margin-left: 26px;
-  margin-top: 8px;
+  margin-left: 1.5rem;
+  padding-top: 3.5rem;
 }
-.navbar-mobile .logo img {
+.navigation .logo img {
   width: 64px;
 }
-.navbar-mobile .openMenu i {
+.navigation-checkbox {
+  display: none;
+}
+.navigation-button {
+  position: absolute;
+  top: 5rem;
+  right: 2rem;
+  z-index: 101;
+  cursor: pointer;
+}
+.navigation-background {
+  height: 4rem;
+  width: 4rem;
+  position: fixed;
+  top: -5rem;
+  right: -5rem;
+  border-radius: 50%;
+  background: -o-radial-gradient(rgba(0, 0, 0, 0.99), rgba(0, 0, 0, 0.99));
+  background: radial-gradient(rgba(0, 0, 0, 0.99), rgba(0, 0, 0, 0.99));
+  z-index: 100;
+  -webkit-transition: -webkit-transform 0.8s cubic-bezier(0.86, 0, 0.07, 1);
+  transition: -webkit-transform 0.8s cubic-bezier(0.86, 0, 0.07, 1);
+  -o-transition: transform 0.8s cubic-bezier(0.86, 0, 0.07, 1);
+  transition: transform 0.8s cubic-bezier(0.86, 0, 0.07, 1);
+  transition: transform 0.8s cubic-bezier(0.86, 0, 0.07, 1), -webkit-transform 0.8s cubic-bezier(0.86, 0, 0.07, 1);
+}
+.navigation-nav {
+  height: 100vh;
+  position: fixed;
+  top: 0;
+  right: 0;
+  z-index: 100;
+  opacity: 0;
+  width: 0;
+  -webkit-transition: all 0.8s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+  -o-transition: all 0.8s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+  transition: all 0.8s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+}
+.navigation-list {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  -webkit-transform: translate(-50%, -50%);
+  -ms-transform: translate(-50%, -50%);
+  transform: translate(-50%, -50%);
+  list-style: none;
+  width: 100%;
+  text-align: center;
+}
+.navigation-list .icons i {
   font-size: 2rem;
-  margin: 20px;
-  display: block;
+  display: inline-block;
+  padding: 12px;
   cursor: pointer;
   background: #830044;
-  background: -webkit-gradient(linear, left bottom, left top, color-stop(10%, #830044), color-stop(44%, #ff0078));
   background: -o-linear-gradient(bottom, #830044 10%, #ff0078 44%);
+  background: -webkit-gradient(linear, left bottom, left top, color-stop(10%, #830044), color-stop(44%, #ff0078));
   background: linear-gradient(to top, #830044 10%, #ff0078 44%);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
 }
-.navbar-mobile .mainMenu {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-pack: center;
-  -ms-flex-pack: center;
-  justify-content: center;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-  -ms-flex-direction: column;
-  flex-direction: column;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
-  margin-top: 0;
-  height: 100vh;
-  position: fixed;
-  top: -120%;
-  right: 0;
-  left: 0;
-  z-index: 10;
-  background-color: rgba(0, 0, 0, 0.975);
-  -webkit-transition: top 1s ease;
-  -o-transition: top 1s ease;
-  transition: top 1s ease;
-  display: none;
-  list-style: none;
-  -webkit-padding-start: 0;
-  padding-inline-start: 0;
-  overflow-y: auto;
+.navigation-list .icons {
+  text-align: center;
+  margin-top: 56px;
 }
-.navbar-mobile .mainMenu .nav-items li a {
+.navigation-item {
+  margin: 1rem;
+}
+.navigation-item a {
   display: inline-block;
   padding: 15px;
   text-decoration: none;
   background: #830044;
-  background: -webkit-gradient(linear, left bottom, left top, color-stop(10%, #830044), color-stop(44%, #ff0078));
   background: -o-linear-gradient(bottom, #830044 10%, #ff0078 44%);
+  background: -webkit-gradient(linear, left bottom, left top, color-stop(10%, #830044), color-stop(44%, #ff0078));
   background: linear-gradient(to top, #830044 10%, #ff0078 44%);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
@@ -608,19 +624,19 @@ body {
   background: linear-gradient(to top, #830044 10%, #ff0078 44%);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
-  font-size: 3rem;
+  font-size: 2.5rem;
   font-family: brat;
 }
-.navbar-mobile .mainMenu .nav-items li .about-hover.underlined,
-.navbar-mobile .mainMenu .nav-items li .work-hover.underlined,
-.navbar-mobile .mainMenu .nav-items li .contact-hover.underlined {
+.navigation-item .about-hover.underlined,
+.navigation-item .work-hover.underlined,
+.navigation-item .contact-hover.underlined {
   display: inline-block;
   color: #830044;
   position: relative;
 }
-.navbar-mobile .mainMenu .nav-items li .about-hover.underlined::after,
-.navbar-mobile .mainMenu .nav-items li .work-hover.underlined::after,
-.navbar-mobile .mainMenu .nav-items li .contact-hover.underlined::after {
+.navigation-item .about-hover.underlined::after,
+.navigation-item .work-hover.underlined::after,
+.navigation-item .contact-hover.underlined::after {
   content: "";
   position: absolute;
   width: 100%;
@@ -641,10 +657,11 @@ body {
   -o-transition: transform 100ms ease-in-out;
   transition: transform 100ms ease-in-out;
   transition: transform 100ms ease-in-out, -webkit-transform 100ms ease-in-out;
+  transition: transform 100ms ease-in-out, -webkit-transform 100ms ease-in-out;
 }
-.navbar-mobile .mainMenu .nav-items li .about-hover.underlined:active::after,
-.navbar-mobile .mainMenu .nav-items li .work-hover.underlined:active::after,
-.navbar-mobile .mainMenu .nav-items li .contact-hover.underlined:active::after {
+.navigation-item .about-hover.underlined:active::after,
+.navigation-item .work-hover.underlined:active::after,
+.navigation-item .contact-hover.underlined:active::after {
   -webkit-transform: scale(1);
   -ms-transform: scale(1);
   transform: scale(1);
@@ -652,44 +669,72 @@ body {
   -ms-transform-origin: bottom left;
   transform-origin: bottom left;
 }
-.navbar-mobile .mainMenu .closeMenu i {
-  display: block;
-  position: absolute;
-  top: 2.5vh;
-  right: 5vw;
-  background: #830044;
-  background: -webkit-gradient(linear, left bottom, left top, color-stop(10%, #830044), color-stop(44%, #ff0078));
-  background: -o-linear-gradient(bottom, #830044 10%, #ff0078 44%);
-  background: linear-gradient(to top, #830044 10%, #ff0078 44%);
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
+.navigation-checkbox:checked ~ .navigation-background {
+  -webkit-transform: scale(80);
+  -ms-transform: scale(80);
+  transform: scale(80);
 }
-.navbar-mobile .mainMenu .closeMenu,
-.navbar-mobile .mainMenu .icons i {
-  font-size: 2rem;
+.navigation-checkbox:checked ~ .navigation-nav {
+  opacity: 1;
+  width: 100%;
+}
+.navigation-icon {
+  position: relative;
+}
+.navigation-icon, .navigation-icon::before, .navigation-icon::after {
+  width: 2.5rem;
+  height: 3px;
+  background-color: #fe007a;
   display: inline-block;
-  padding: 12px;
-  cursor: pointer;
-  background: #830044;
-  background: -webkit-gradient(linear, left bottom, left top, color-stop(10%, #830044), color-stop(44%, #ff0078));
-  background: -o-linear-gradient(bottom, #830044 10%, #ff0078 44%);
-  background: linear-gradient(to top, #830044 10%, #ff0078 44%);
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
+  border-radius: 90%;
 }
-.navbar-mobile .mainMenu .icons {
-  text-align: center;
-  margin-top: 56px;
+.navigation-icon::before, .navigation-icon::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  -webkit-transition: all 0.2s;
+  -o-transition: all 0.2s;
+  transition: all 0.2s;
+}
+.navigation-icon::before {
+  top: -0.8rem;
+}
+.navigation-icon::after {
+  top: 0.8rem;
+}
+.navigation-button:hover .navigation-icon::before {
+  top: -1rem;
+}
+.navigation-button:hover .navigation-icon::after {
+  top: 1rem;
+}
+.navigation-checkbox:checked + .navigation-button .navigation-icon {
+  background-color: transparent;
+}
+.navigation-checkbox:checked + .navigation-button .navigation-icon::before {
+  top: 0;
+  -webkit-transform: rotate(135deg);
+  -ms-transform: rotate(135deg);
+  transform: rotate(135deg);
+}
+.navigation-checkbox:checked + .navigation-button .navigation-icon::after {
+  top: 0;
+  -webkit-transform: rotate(-135deg);
+  -ms-transform: rotate(-135deg);
+  transform: rotate(-135deg);
+}
+.navigation-checkbox:checked + .navigation-button {
+  position: fixed;
 }
 
 @media (min-width: 768px) {
-  .navbar-mobile {
+  .navigation {
     display: none;
   }
 }
 /*BACKGROUND VIDEO*/
 .video-overlay {
-  background: radial-gradient(circle, rgba(0, 0, 0, 0.65) 0%, rgba(0, 0, 0, 0.1) 40%);
+  background: radial-gradient(circle, rgba(0, 0, 0, 0.815) 0%, rgba(0, 0, 0, 0.1) 40%);
   position: fixed;
   top: 0;
   left: 0;
@@ -768,8 +813,8 @@ body {
   color: #fff;
   -webkit-text-stroke: 0.01px rgba(180, 180, 180, 0.438);
   text-shadow: 0 0 26px rgba(68, 68, 68, 0.438);
-  -webkit-animation: flicker 1.5s 6.45s infinite alternate, web-dev-ani 250ms 6.5s forwards;
-  animation: flicker 1.5s 6.45s infinite alternate, web-dev-ani 250ms 6.5s forwards;
+  -webkit-animation: flicker 1.5s 6.45s infinite alternate, web-dev-ani 250ms 3.5s forwards;
+  animation: flicker 1.5s 4.25s infinite alternate, web-dev-ani 250ms 3.5s forwards;
   -webkit-transform: rotate(-8deg);
   -ms-transform: rotate(-8deg);
   transform: rotate(-8deg);
@@ -857,6 +902,10 @@ body {
 * Autoprefixer: v10.3.1
 * Browsers: last 4 version
 */
+body {
+  font-family: "Jura", sans-serif;
+}
+
 .pages-wrapper {
   margin: 15vh 1.5rem 0;
 }
@@ -999,6 +1048,7 @@ body {
 * Browsers: last 4 version
 */
 body {
+  font-family: "Jura", sans-serif;
   background-color: rgba(0, 0, 0, 0.975);
   color: #fff;
 }
@@ -1142,7 +1192,7 @@ a {
 .main-transition-overlay1 {
   position: fixed;
   background-color: black;
-  z-index: 10;
+  z-index: 200;
   height: 50vh;
   top: 0;
   left: 0;
@@ -1196,7 +1246,7 @@ a {
 .main-transition-overlay2 {
   position: fixed;
   background-color: black;
-  z-index: 10;
+  z-index: 200;
   height: 50vh;
   top: 50vh;
   left: 0;
@@ -1241,7 +1291,7 @@ a {
   width: 150px;
   opacity: 0;
   position: absolute;
-  z-index: 10;
+  z-index: 200;
   top: 50%;
   left: 50%;
   -webkit-transform: translateY(-50%) translateX(-50%);
@@ -1301,7 +1351,7 @@ a {
 .transition-overlay1 {
   position: fixed;
   background-color: black;
-  z-index: 10;
+  z-index: 200;
   height: 50vh;
   top: 0;
   left: 0;
@@ -1323,7 +1373,7 @@ a {
 .transition-overlay2 {
   position: fixed;
   background-color: black;
-  z-index: 10;
+  z-index: 200;
   height: 50vh;
   top: 50vh;
   left: 0;

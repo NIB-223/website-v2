@@ -22,16 +22,17 @@
 <body>
 
 
-    <!--MAIN SCREEN TRANSITION-->
+    <!-- MAIN SCREEN TRANSITION -->
 
     <div>
-        <div class="main-transition-overlay1"></div>
-        <div class="main-transition-overlay2"></div>
-        <picture>
+        <!--replaces main-transition-overlay-->
+        <div class="transition-overlay1"></div>
+        <div class="transition-overlay2"></div>
+        <!-- <picture>
             <source srcset="./img/logo.webp" type="image/webp">
             <source srcset="./img/logo.png" type="image/png">
             <img class="logo-preloader" src="./img/logo.png" alt="logo-spin" loading="lazy">
-        </picture>
+        </picture> -->
 
     </div>
 
@@ -45,7 +46,6 @@
             <source src="./media/Retro Background 01.mp4" type="video/mp4">
             <source src="./media/Retro Background 01.ogv" type="video/ogv">
         </video>
-
     </div>
 
 
@@ -54,32 +54,45 @@
     <header id="header">
 
         <!--mobile header-->
-        <nav class="navbar-mobile animation_mobileNav--main">
-            <!--logo-->
-            <div class="logo"><a class="underlined-logo logo-hover" href="index.html" title="Home">
+        <div class="navigation">
+            <!--Logo-->
+            <div class="logo"><a class="underlined-logo" href="index.html" title="Home">
                     <img src="./img/logo.png" alt="logo">
                 </a></div>
-            <!--hamburger-->
-            <div class="openMenu"><i class="fa-solid fa-bars"></i></div>
-            <!--navbar menu-->
-            <ul class="mainMenu">
-                <div class="nav-items">
-                    <li><a class="underlined about-hover" href="about.html" title="About Me">About</a></li>
-                    <li><a class="underlined work-hover" href="work.html" title="My Work">Work</a></li>
-                    <li><a class="underlined contact-hover" href="mailto: robertu.dev@gmail.com"
-                            title="Contact Me">Contact</a></li>
-                    <!--social-->
+            <!--Checklist & hamburger icon-->
+            <input type="checkbox" class="navigation-checkbox" id="navi-toggle">
+            <label for="navi-toggle" class="navigation-button">
+                <span class="navigation-icon">&nbsp;</span>
+            </label>
+            <!--Menu Background-->
+            <div class="navigation-background">&nbsp;</div>
+            <!--Nav Menu-->
+            <nav class="navigation-nav">
+                <ul class="navigation-list">
+                    <li class="navigation-item">
+                        <a href="about.html" class="underlined about-hover navigation-link" title="About Me">About
+                            Me
+                        </a>
+                    </li>
+                    <li class="navigation-item">
+                        <a href="work.html" class="underlined work-hover navigation-link" title="My Work">My
+                            Work
+                        </a>
+                    </li>
+                    <li class="navigation-item">
+                        <a href="mailto: robertu.dev@gmail.com" class="underlined contact-hover navigation-link"
+                            title="Contact Me">Contact
+                        </a>
+                    </li>
                     <div class="icons">
                         <a target="_blank" title="Github" href="https://github.com/Drxl95"><i
                                 class="fa-brands fa-github-alt"></i></a>
                         <a target="_blank" title="LinkedIn" href="https://www.linkedin.com/in/robert-uebelhor/"><i
                                 class="fa-brands fa-linkedin-in"></i></a>
                     </div>
-                </div>
-                <!--close(x) button-->
-                <div class="closeMenu"><i class="fa-solid fa-x"></i></div>
-            </ul>
-        </nav>
+                </ul>
+            </nav>
+        </div>
 
 
         <!--desktop header-->
@@ -129,7 +142,7 @@
             <div class="h1-wrapper">
                 <h1 class="name-ani" data-text="Robert Uebelhor">Robert Uebelhor</h1>
             </div>
-            <h2 class="web-dev-ani" data-text="web-dev">Web Developer</h2>
+            <h2 class="web-dev-ani">Web Developer</h2>
         </div>
     </section>
 
