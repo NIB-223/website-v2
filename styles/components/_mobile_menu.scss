@@ -228,7 +228,7 @@ ul {
   }
 }
 
-@media (min-width: map-get($viewport_size, m)) {
+@media only screen and (min-width: map-get($viewport_size, m)) {
   .navigation {
     display: none;
   }

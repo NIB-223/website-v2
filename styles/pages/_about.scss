@@ -131,7 +131,7 @@ body {
   }
 }
 
-@media (min-width: map-get($viewport_size, m)) {
+@media only screen and (min-width: map-get($viewport_size, m)) {
   .pages-wrapper {
     .pages-wrapper--about {
       max-width: 50rem;
@@ -159,7 +159,7 @@ body {
   }
 }
 
-@media (min-width: map-get($viewport_size, l)) {
+@media only screen and (min-width: map-get($viewport_size, l)) {
   .pages-wrapper {
     .about-text {
       max-width: 75%;
@@ -182,7 +182,7 @@ body {
   }
 }
 
-@media (min-width: map-get($viewport_size, xl)) {
+@media only screen and (min-width: map-get($viewport_size, xl)) {
   .pages-wrapper {
     .pages-wrapper--about {
       max-width: none;
@@ -190,7 +190,7 @@ body {
   }
 }
 
-@media (min-width: 1550px) {
+@media only screen and (min-width: 1550px) {
   .sun-wrapper {
     .sun {
       width: 275px;
@@ -199,7 +199,7 @@ body {
   }
 }
 
-@media (min-width: 1700px) {
+@media only screen and (min-width: 1700px) {
   .sun-wrapper {
     .sun {
       width: 300px;

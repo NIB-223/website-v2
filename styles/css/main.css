@@ -26,6 +26,10 @@ body {
   width: 2px;
 }
 
+::selection {
+  background-color: #ff0077f5;
+}
+
 /*Breakpoints*/
 /*Typography*/
 /*
@@ -515,7 +519,7 @@ a {
   -webkit-text-fill-color: transparent;
 }
 
-@media (min-width: 768px) {
+@media only screen and (min-width: 768px) {
   .desktop-header {
     display: unset;
   }
@@ -727,7 +731,7 @@ ul {
   position: fixed;
 }
 
-@media (min-width: 768px) {
+@media only screen and (min-width: 768px) {
   .navigation {
     display: none;
   }
@@ -861,7 +865,7 @@ ul {
   }
 }
 
-@media (max-width: 280px) {
+@media only screen and (max-width: 280px) {
   .wrapper .content-wrapper h1 {
     font-size: 1.45rem !important;
   }
@@ -870,7 +874,7 @@ ul {
     top: 40%;
   }
 }
-@media (max-width: 340px) {
+@media only screen and (max-width: 340px) {
   .wrapper .content-wrapper h1 {
     font-size: 1.65rem;
   }
@@ -879,7 +883,7 @@ ul {
     top: 40%;
   }
 }
-@media (min-width: 768px) {
+@media only screen and (min-width: 768px) {
   .wrapper .content-wrapper picture .triangle-flip {
     width: 31.25rem;
   }
@@ -891,7 +895,7 @@ ul {
     font-size: 3.5rem;
   }
 }
-@media (max-device-width: 1024px) and (orientation: landscape) {
+@media only screen and (max-device-width: 1024px) and (orientation: landscape) {
   .wrapper .content-wrapper {
     padding-bottom: 64px;
   }
@@ -981,7 +985,7 @@ body {
     margin-bottom: 3rem;
   }
 }
-@media (min-width: 768px) {
+@media only screen and (min-width: 768px) {
   .pages-wrapper .pages-wrapper--about {
     max-width: 50rem;
     margin-top: 20vh;
@@ -1004,7 +1008,7 @@ body {
     padding: 0.75rem 4.4rem;
   }
 }
-@media (min-width: 1024px) {
+@media only screen and (min-width: 1024px) {
   .pages-wrapper .about-text {
     max-width: 75%;
   }
@@ -1024,18 +1028,18 @@ body {
     height: 200px;
   }
 }
-@media (min-width: 1200px) {
+@media only screen and (min-width: 1200px) {
   .pages-wrapper .pages-wrapper--about {
     max-width: none;
   }
 }
-@media (min-width: 1550px) {
+@media only screen and (min-width: 1550px) {
   .sun-wrapper .sun {
     width: 275px;
     height: 275px;
   }
 }
-@media (min-width: 1700px) {
+@media only screen and (min-width: 1700px) {
   .sun-wrapper .sun {
     width: 300px;
     height: 300px;
@@ -1123,12 +1127,12 @@ a {
   -webkit-text-fill-color: transparent;
 }
 
-@media (min-width: 500px) {
+@media only screen and (min-width: 500px) {
   .pages-wrapper .pages-content-wrapper .work-list li img {
     max-width: 80%;
   }
 }
-@media (min-width: 768px) {
+@media only screen and (min-width: 768px) {
   .pages-wrapper {
     margin: 20vh 5% 0;
   }
@@ -1153,7 +1157,7 @@ a {
     font-size: 2rem;
   }
 }
-@media (min-width: 1024px) {
+@media only screen and (min-width: 1024px) {
   .pages-wrapper .pages-content-wrapper {
     max-width: 62rem;
   }
@@ -1171,7 +1175,7 @@ a {
     max-width: none;
   }
 }
-@media (min-width: 1200px) {
+@media only screen and (min-width: 1200px) {
   .pages-wrapper {
     max-width: 90rem;
   }

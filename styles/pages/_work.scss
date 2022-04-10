@@ -100,7 +100,7 @@ a {
   }
 }
 
-@media (min-width: 500px) {
+@media only screen and (min-width: 500px) {
   .pages-wrapper {
     .pages-content-wrapper {
       .work-list {
@@ -114,7 +114,7 @@ a {
   }
 }
 
-@media (min-width: map-get($viewport_size, m)) {
+@media only screen and (min-width: map-get($viewport_size, m)) {
   .pages-wrapper {
     margin: 20vh 5% 0;
     .title {
@@ -148,7 +148,7 @@ a {
   }
 }
 
-@media (min-width: map-get($viewport_size, l)) {
+@media only screen and (min-width: map-get($viewport_size, l)) {
   .pages-wrapper {
     .pages-content-wrapper {
       max-width: 62rem;
@@ -171,7 +171,7 @@ a {
   }
 }
 
-@media (min-width: map-get($viewport_size, xl)) {
+@media only screen and (min-width: map-get($viewport_size, xl)) {
   .pages-wrapper {
     max-width: 90rem;
     .pages-content-wrapper {

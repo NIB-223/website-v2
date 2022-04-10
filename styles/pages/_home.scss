@@ -199,7 +199,7 @@
   }
 }
 
-@media (max-width: 280px) {
+@media only screen and (max-width: 280px) {
   .wrapper {
     .content-wrapper {
       h1 {
@@ -213,7 +213,7 @@
   }
 }
 
-@media (max-width: 340px) {
+@media only screen and (max-width: 340px) {
   .wrapper {
     .content-wrapper {
       h1 {
@@ -227,7 +227,7 @@
   }
 }
 
-@media (min-width: map-get($viewport_size, m)) {
+@media only screen and (min-width: map-get($viewport_size, m)) {
   .wrapper {
     .content-wrapper {
       picture {
@@ -247,7 +247,7 @@
   }
 }
 
-@media (max-device-width: 1024px) and (orientation: landscape) {
+@media only screen and (max-device-width: 1024px) and (orientation: landscape) {
   .wrapper {
     .content-wrapper {
       padding-bottom: 64px;
