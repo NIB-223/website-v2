@@ -526,8 +526,8 @@ a {
 }
 /*
 * Prefixed by https://autoprefixer.github.io
-* PostCSS: v8.3.6,
-* Autoprefixer: v10.3.1
+* PostCSS: v8.4.12,
+* Autoprefixer: v10.4.4
 * Browsers: last 4 version
 */
 ul {
@@ -571,6 +571,7 @@ ul {
   -o-transition: transform 0.8s cubic-bezier(0.86, 0, 0.07, 1);
   transition: transform 0.8s cubic-bezier(0.86, 0, 0.07, 1);
   transition: transform 0.8s cubic-bezier(0.86, 0, 0.07, 1), -webkit-transform 0.8s cubic-bezier(0.86, 0, 0.07, 1);
+  transition: transform 0.8s cubic-bezier(0.86, 0, 0.07, 1), -webkit-transform 0.8s cubic-bezier(0.86, 0, 0.07, 1);
 }
 .navigation-nav {
   height: 100vh;
@@ -579,10 +580,9 @@ ul {
   right: 0;
   z-index: 100;
   opacity: 0;
-  width: 0;
-  -webkit-transition: all 0.8s cubic-bezier(0.68, -0.55, 0.265, 1.55);
-  -o-transition: all 0.8s cubic-bezier(0.68, -0.55, 0.265, 1.55);
-  transition: all 0.8s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+  -webkit-transition: opacity 0.6s ease-in-out;
+  -o-transition: opacity 0.6s ease-in-out;
+  transition: opacity 0.6s ease-in-out;
 }
 .navigation-list {
   position: absolute;
@@ -598,7 +598,7 @@ ul {
 .navigation-list .icons i {
   font-size: 2rem;
   display: inline-block;
-  margin: 12px;
+  padding: 12px;
   cursor: pointer;
   background: #830044;
   background: -o-linear-gradient(bottom, #830044 10%, #ff0078 44%);
@@ -610,6 +610,7 @@ ul {
 .navigation-list .icons {
   text-align: center;
   margin-top: 56px;
+  white-space: nowrap;
 }
 .navigation-item {
   margin: 1rem;
@@ -617,7 +618,7 @@ ul {
 .navigation-item a {
   white-space: nowrap;
   display: inline-block;
-  margin: 15px;
+  padding: 15px;
   text-decoration: none;
   background: #830044;
   background: -o-linear-gradient(bottom, #830044 10%, #ff0078 44%);
@@ -663,6 +664,7 @@ ul {
   transition: transform 100ms ease-in-out;
   transition: transform 100ms ease-in-out, -webkit-transform 100ms ease-in-out;
   transition: transform 100ms ease-in-out, -webkit-transform 100ms ease-in-out;
+  transition: transform 100ms ease-in-out, -webkit-transform 100ms ease-in-out;
 }
 .navigation-item .about-hover.underlined:active::after,
 .navigation-item .work-hover.underlined:active::after,
@@ -682,8 +684,22 @@ ul {
 .navigation-checkbox:checked ~ .navigation-nav {
   opacity: 1;
   width: 100%;
+  -webkit-transition-property: opacity;
+  -o-transition-property: opacity;
   transition-property: opacity;
+  -webkit-transition-delay: 100ms;
+  -o-transition-delay: 100ms;
   transition-delay: 100ms;
+}
+.navigation-checkbox:not(:checked) ~ .navigation-nav {
+  opacity: 0;
+  width: 100%;
+  -webkit-transition-property: opacity;
+  -o-transition-property: opacity;
+  transition-property: opacity;
+  -webkit-transition-delay: 50ms;
+  -o-transition-delay: 50ms;
+  transition-delay: 50ms;
 }
 .navigation-icon {
   position: relative;
