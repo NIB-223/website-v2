@@ -95,8 +95,9 @@ ul {
   &-item {
     margin: 1rem;
     a {
+      white-space: nowrap;
       display: inline-block;
-      padding: 15px;
+      margin: 15px;
       text-decoration: none;
       background: #830044;
       background: -o-linear-gradient(bottom, #830044 10%, #ff0078 44%);
