@@ -37,8 +37,8 @@ ul {
     top: -5rem;
     right: -5rem;
     border-radius: 50%;
-    background: -o-radial-gradient(rgba(0, 0, 0, 0.9), rgb(0, 0, 0, 0.9));
-    background: radial-gradient(rgba(0, 0, 0, 0.9), rgb(0, 0, 0, 0.9));
+    background: -o-radial-gradient(rgba(0, 0, 0, 0.95), rgb(0, 0, 0, 0.95));
+    background: radial-gradient(rgba(0, 0, 0, 0.95), rgb(0, 0, 0, 0.95));
     z-index: 100;
     -webkit-transition: -webkit-transform 0.8s cubic-bezier(0.86, 0, 0.07, 1);
     transition: -webkit-transform 0.8s cubic-bezier(0.86, 0, 0.07, 1);
@@ -72,7 +72,7 @@ ul {
     .icons i {
       font-size: 2rem;
       display: inline-block;
-      padding: 12px;
+      margin: 12px;
       cursor: pointer;
       background: #830044;
       background: -o-linear-gradient(bottom, #830044 10%, #ff0078 44%);
