@@ -170,6 +170,8 @@ ul {
   &-checkbox:checked ~ &-nav {
     opacity: 1;
     width: 100%;
+    transition-property: opacity;
+    transition-delay: 100ms;
   }
 
   &-icon {

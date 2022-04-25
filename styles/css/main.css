@@ -681,6 +681,8 @@ ul {
 .navigation-checkbox:checked ~ .navigation-nav {
   opacity: 1;
   width: 100%;
+  transition-property: opacity;
+  transition-delay: 100ms;
 }
 .navigation-icon {
   position: relative;
