@@ -687,19 +687,15 @@ ul {
   -webkit-transition-property: opacity;
   -o-transition-property: opacity;
   transition-property: opacity;
-  -webkit-transition-delay: 100ms;
-  -o-transition-delay: 100ms;
-  transition-delay: 100ms;
+  -webkit-transition-delay: 125ms;
+  -o-transition-delay: 125ms;
+  transition-delay: 400ms;
 }
 .navigation-checkbox:not(:checked) ~ .navigation-nav {
-  opacity: 0;
+  visibility: hidden;
   width: 100%;
-  -webkit-transition-property: opacity;
-  -o-transition-property: opacity;
-  transition-property: opacity;
-  -webkit-transition-delay: 50ms;
-  -o-transition-delay: 50ms;
-  transition-delay: 50ms;
+  transition-property: visibility;
+  transition-delay: 500ms;
 }
 .navigation-icon {
   position: relative;
@@ -846,6 +842,7 @@ ul {
   top: 40%;
   font-family: "Yellowtail", cursive;
   opacity: 0;
+  font-weight: 500;
 }
 @-webkit-keyframes flicker {
   0%, 10%, 22%, 25%, 53%, 57%, 100% {
